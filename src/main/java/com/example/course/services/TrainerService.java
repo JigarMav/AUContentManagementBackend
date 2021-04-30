@@ -10,7 +10,7 @@ public interface TrainerService {
 	
 	public List<Trainer> getAllTrainers();
 	
-	public Trainer getTrainerByCourseID(int id);
+	public List<Trainer> getTrainerByCourseID(int id);
 	
 	public void addTrainer(Trainer trainer);
 	

@@ -32,12 +32,12 @@ public class TrainerDaoImpl implements TrainerDao {
 	}
 
 	@Override
-	public Trainer getTrainerByCourseID(int id) {
+	public List<Trainer> getTrainerByCourseID(int id) {
 		String query = "SELECT * FROM courses JOIN " + 
 						"(SELECT * FROM users JOIN trainers ON users.userID = trainers.trainerID) AS trainer " +
 						"ON courses.courseID = trainer.courseID WHERE courses.courseID = ?"; 
 				
-		return jdbcTemplate.queryForObject(query, new TrainerRowMapper(), id);
+		return jdbcTemplate.query(query, new TrainerRowMapper(), id);
 	}
 
 	@Override

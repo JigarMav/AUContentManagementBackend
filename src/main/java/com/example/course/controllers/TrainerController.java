@@ -30,7 +30,7 @@ public class TrainerController {
 	}
 	
 	@GetMapping(value= "/{id}")
-	public Trainer getTrainerByCourseID(@PathVariable("id") int id) {
+	public List<Trainer> getTrainerByCourseID(@PathVariable("id") int id) {
 		return trainerService.getTrainerByCourseID(id);
 	}
 	

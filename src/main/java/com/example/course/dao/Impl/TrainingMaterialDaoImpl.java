@@ -22,6 +22,7 @@ import org.springframework.web.multipart.MultipartFile;
 @Repository
 public class TrainingMaterialDaoImpl implements TrainingMaterialDao {
 
+
 	@Autowired
 	JdbcTemplate jdbcTemplate;
 	
@@ -49,23 +50,29 @@ public class TrainingMaterialDaoImpl implements TrainingMaterialDao {
 		String query = "SELECT * FROM training_materials WHERE courseId = ? AND active_flag = ?";
 		return jdbcTemplate.query(query, new TrainingMaterialRowMapper(), id, "Y");
 	}
+	//Fetches only new material for particular course
+	@Override
+	public List<TrainingMaterial> getMaterialByTrainerID(int id) {
+		String query = "SELECT * FROM training_materials WHERE trainerId = ? AND active_flag = ?";
+		return jdbcTemplate.query(query, new TrainingMaterialRowMapper(), id, "Y");
+	}
 
 	@Override
-	public void addMaterial(MultipartFile file, int courseId) {
+	public void addMaterial(MultipartFile file, int courseId,int trainerId) {
 //		System.out.println(file.getName() +"---"+ courseId);
-		String prequery = "UPDATE training_materials SET active_flag = ?, status = ? WHERE courseId = ? AND active_flag = ?";
-		jdbcTemplate.update(prequery, "N","Old",courseId,"Y");
+		String prequery = "UPDATE training_materials SET active_flag = ?, status = ? WHERE courseId = ? AND trainerId=? AND active_flag = ?";
+		jdbcTemplate.update(prequery, "N","Old",courseId,trainerId,"Y");
 		
-		String query = "INSERT INTO training_materials(courseId, fileName,fileType,file,active_flag,status) VALUES (?,?,?,?,?,?)";
+		String query = "INSERT INTO training_materials(courseId,trainerId, fileName,fileType,file,active_flag,status) VALUES (?,?,?,?,?,?,?)";
 		
 		try {
 			
 			byte[] bytes = file.getBytes();
 			Blob blob;
 			blob = new javax.sql.rowset.serial.SerialBlob(bytes);
-			jdbcTemplate.update(query, courseId,file.getOriginalFilename(),file.getContentType(), blob,"Y","New");
+			jdbcTemplate.update(query, courseId,trainerId,file.getOriginalFilename(),file.getContentType(), blob,"Y","New");
 			
-			LoggerConfig.LOGGER.info("Added New Material -> " + courseId);
+			LoggerConfig.LOGGER.info("Added New Material -> " + courseId+" by trainer -"+trainerId);
 			
 		} catch (Exception e) {
 			LoggerConfig.LOGGER.error("Error Adding New Material");

@@ -14,6 +14,11 @@ import org.springframework.web.multipart.MultipartFile;
 @Service
 public class TrainingMaterialServiceImpl implements TrainingMaterialService {
 
+	@Override
+	public List<TrainingMaterial> getMaterialByTrainerID(int id) {
+		return materialdao.getMaterialByTrainerID(id);
+	}
+
 	@Autowired
 	TrainingMaterialDaoImpl materialdao;
 	
@@ -28,8 +33,8 @@ public class TrainingMaterialServiceImpl implements TrainingMaterialService {
 	}
 
 	@Override
-	public void addMaterial(MultipartFile file, int courseId) {
-		materialdao.addMaterial(file, courseId);
+	public void addMaterial(MultipartFile file, int courseId,int trainerId) {
+		materialdao.addMaterial(file, courseId,trainerId);
 		
 	}
 

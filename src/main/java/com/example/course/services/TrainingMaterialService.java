@@ -13,8 +13,9 @@ public interface TrainingMaterialService {
 	public List<TrainingMaterial> getMaterialActive();
 	
 	public List<TrainingMaterial> getMaterialByCourseID(int id);
-	
-	public void addMaterial(MultipartFile file, int courseId);
+	public List<TrainingMaterial> getMaterialByTrainerID(int id);
+
+	public void addMaterial(MultipartFile file, int courseId,int trainerId);
 	
 	public void deleteMaterial(int id);
 }

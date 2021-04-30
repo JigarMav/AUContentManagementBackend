@@ -41,11 +41,17 @@ public class TrainingMaterialController {
 	public List<TrainingMaterial> getMaterialByCourseID(@PathVariable("id") int id) {
 		return materialService.getMaterialByCourseID(id);
 	}
+	@GetMapping(value= "/trainer/{id}")
+	public List<TrainingMaterial> getMaterialByTrainerID(@PathVariable("id") int id) {
+		return materialService.getMaterialByTrainerID(id);
+	}
 	
 	@PostMapping(value= "/add")
 	@ResponseBody
-	public void addMaterial(@RequestParam("file") MultipartFile file, @RequestParam("courseId") int courseId) {
-		materialService.addMaterial(file, courseId);
+	public void addMaterial(@RequestParam("file") MultipartFile file,
+							@RequestParam("courseId") int courseId,
+							@RequestParam("trainerId") int trainerId) {
+		materialService.addMaterial(file, courseId,trainerId);
 	}
 	
 	@DeleteMapping(value= "/delete/{mid}")

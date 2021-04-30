@@ -22,7 +22,7 @@ public class TrainerServiceImpl implements TrainerService {
 	}
 
 	@Override
-	public Trainer getTrainerByCourseID(int id) {
+	public List<Trainer> getTrainerByCourseID(int id) {
 		return trainerdao.getTrainerByCourseID(id);
 	}
 
