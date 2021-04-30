@@ -1,0 +1,156 @@
+2021-04-30 01:14:44 [restartedMain] INFO  com.example.course.CourseApplication - Starting CourseApplication using Java 11.0.1 on DESKTOP-OLRSLGO with PID 10220 (C:\Users\Jigar\IdeaProjects\course\target\classes started by Jigar in C:\Users\Jigar\IdeaProjects\course)
+2021-04-30 01:14:44 [restartedMain] INFO  com.example.course.CourseApplication - No active profile set, falling back to default profiles: default
+2021-04-30 01:14:44 [restartedMain] INFO  o.s.b.d.e.DevToolsPropertyDefaultsPostProcessor - Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2021-04-30 01:14:44 [restartedMain] INFO  o.s.b.d.e.DevToolsPropertyDefaultsPostProcessor - For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2021-04-30 01:14:45 [restartedMain] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Bootstrapping Spring Data JDBC repositories in DEFAULT mode.
+2021-04-30 01:14:45 [restartedMain] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 11 ms. Found 0 JDBC repository interfaces.
+2021-04-30 01:14:45 [restartedMain] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat initialized with port(s): 8080 (http)
+2021-04-30 01:14:45 [restartedMain] INFO  o.a.catalina.core.StandardService - Starting service [Tomcat]
+2021-04-30 01:14:45 [restartedMain] INFO  o.a.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/9.0.45]
+2021-04-30 01:14:45 [restartedMain] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+2021-04-30 01:14:45 [restartedMain] INFO  o.s.b.w.s.c.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 921 ms
+2021-04-30 01:14:45 [restartedMain] INFO  o.s.s.c.ThreadPoolTaskExecutor - Initializing ExecutorService 'applicationTaskExecutor'
+2021-04-30 01:14:45 [restartedMain] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Starting...
+2021-04-30 01:14:46 [restartedMain] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Start completed.
+2021-04-30 01:14:46 [restartedMain] INFO  o.s.b.d.a.OptionalLiveReloadServer - LiveReload server is running on port 35729
+2021-04-30 01:14:46 [restartedMain] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat started on port(s): 8080 (http) with context path ''
+2021-04-30 01:14:46 [restartedMain] INFO  com.example.course.CourseApplication - Started CourseApplication in 2.121 seconds (JVM running for 3.452)
+2021-04-30 01:19:36 [http-nio-8080-exec-1] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+2021-04-30 01:19:36 [http-nio-8080-exec-1] INFO  o.s.web.servlet.DispatcherServlet - Initializing Servlet 'dispatcherServlet'
+2021-04-30 01:19:36 [http-nio-8080-exec-1] INFO  o.s.web.servlet.DispatcherServlet - Completed initialization in 0 ms
+2021-04-30 01:19:36 [http-nio-8080-exec-1] INFO  com.example.course.CourseApplication - Fetched All Courses.
+2021-04-30 10:15:49 [restartedMain] INFO  com.example.course.CourseApplication - Starting CourseApplication using Java 11.0.1 on DESKTOP-OLRSLGO with PID 16260 (C:\Users\Jigar\IdeaProjects\course\target\classes started by Jigar in C:\Users\Jigar\IdeaProjects\course)
+2021-04-30 10:15:49 [restartedMain] INFO  com.example.course.CourseApplication - No active profile set, falling back to default profiles: default
+2021-04-30 10:15:49 [restartedMain] INFO  o.s.b.d.e.DevToolsPropertyDefaultsPostProcessor - Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2021-04-30 10:15:49 [restartedMain] INFO  o.s.b.d.e.DevToolsPropertyDefaultsPostProcessor - For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2021-04-30 10:15:50 [restartedMain] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Bootstrapping Spring Data JDBC repositories in DEFAULT mode.
+2021-04-30 10:15:50 [restartedMain] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 11 ms. Found 0 JDBC repository interfaces.
+2021-04-30 10:15:50 [restartedMain] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat initialized with port(s): 8080 (http)
+2021-04-30 10:15:50 [restartedMain] INFO  o.a.catalina.core.StandardService - Starting service [Tomcat]
+2021-04-30 10:15:50 [restartedMain] INFO  o.a.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/9.0.45]
+2021-04-30 10:15:50 [restartedMain] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+2021-04-30 10:15:50 [restartedMain] INFO  o.s.b.w.s.c.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 945 ms
+2021-04-30 10:15:50 [restartedMain] INFO  o.s.s.c.ThreadPoolTaskExecutor - Initializing ExecutorService 'applicationTaskExecutor'
+2021-04-30 10:15:51 [restartedMain] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Starting...
+2021-04-30 10:15:51 [restartedMain] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Start completed.
+2021-04-30 10:15:51 [restartedMain] INFO  o.s.b.d.a.OptionalLiveReloadServer - LiveReload server is running on port 35729
+2021-04-30 10:15:51 [restartedMain] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat started on port(s): 8080 (http) with context path ''
+2021-04-30 10:15:51 [restartedMain] INFO  com.example.course.CourseApplication - Started CourseApplication in 2.334 seconds (JVM running for 3.41)
+2021-04-30 10:15:59 [http-nio-8080-exec-1] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+2021-04-30 10:15:59 [http-nio-8080-exec-1] INFO  o.s.web.servlet.DispatcherServlet - Initializing Servlet 'dispatcherServlet'
+2021-04-30 10:15:59 [http-nio-8080-exec-1] INFO  o.s.web.servlet.DispatcherServlet - Completed initialization in 1 ms
+2021-04-30 10:15:59 [http-nio-8080-exec-1] INFO  com.example.course.CourseApplication - Fetched All Courses.
+2021-04-30 10:18:33 [http-nio-8080-exec-6] INFO  com.example.course.CourseApplication - Fetched All Courses.
+2021-04-30 10:19:14 [http-nio-8080-exec-5] INFO  com.example.course.CourseApplication - Fetched All Courses.
+2021-04-30 10:19:32 [http-nio-8080-exec-7] INFO  com.example.course.CourseApplication - Fetched All Courses.
+2021-04-30 10:19:38 [http-nio-8080-exec-8] INFO  com.example.course.CourseApplication - Fetched All Courses.
+2021-04-30 10:19:43 [http-nio-8080-exec-10] INFO  com.example.course.CourseApplication - Fetched All Courses.
+2021-04-30 10:20:20 [http-nio-8080-exec-4] INFO  com.example.course.CourseApplication - Fetched All Courses.
+2021-04-30 10:20:39 [http-nio-8080-exec-2] INFO  com.example.course.CourseApplication - Fetched All Courses.
+2021-04-30 10:20:47 [http-nio-8080-exec-3] INFO  com.example.course.CourseApplication - Fetched All Courses.
+2021-04-30 10:20:53 [http-nio-8080-exec-7] INFO  com.example.course.CourseApplication - Fetched All Courses.
+2021-04-30 10:20:56 [http-nio-8080-exec-8] INFO  com.example.course.CourseApplication - Fetched All Courses.
+2021-04-30 10:29:52 [http-nio-8080-exec-10] INFO  com.example.course.CourseApplication - Fetched All Courses.
+2021-04-30 10:30:54 [http-nio-8080-exec-4] INFO  com.example.course.CourseApplication - Fetched All Courses.
+2021-04-30 10:33:24 [http-nio-8080-exec-2] INFO  com.example.course.CourseApplication - Fetched All Courses.
+2021-04-30 10:36:25 [http-nio-8080-exec-3] INFO  com.example.course.CourseApplication - Fetched All Courses.
+2021-04-30 10:37:51 [http-nio-8080-exec-8] INFO  com.example.course.CourseApplication - Fetched All Courses.
+2021-04-30 10:53:04 [http-nio-8080-exec-10] INFO  com.example.course.CourseApplication - Fetched All Courses.
+2021-04-30 11:00:35 [http-nio-8080-exec-4] INFO  com.example.course.CourseApplication - Fetched All Courses.
+2021-04-30 11:01:08 [http-nio-8080-exec-2] INFO  com.example.course.CourseApplication - Fetched All Courses.
+2021-04-30 11:01:41 [http-nio-8080-exec-3] INFO  com.example.course.CourseApplication - Fetched All Courses.
+2021-04-30 11:02:02 [http-nio-8080-exec-8] INFO  com.example.course.CourseApplication - Fetched All Courses.
+2021-04-30 11:04:18 [http-nio-8080-exec-10] INFO  com.example.course.CourseApplication - Fetched All Courses.
+2021-04-30 11:04:37 [http-nio-8080-exec-4] INFO  com.example.course.CourseApplication - Fetched All Courses.
+2021-04-30 11:05:38 [http-nio-8080-exec-2] INFO  com.example.course.CourseApplication - Fetched All Courses.
+2021-04-30 11:06:29 [http-nio-8080-exec-3] INFO  com.example.course.CourseApplication - Fetched All Courses.
+2021-04-30 11:06:36 [http-nio-8080-exec-8] INFO  com.example.course.CourseApplication - Fetched All Courses.
+2021-04-30 11:07:26 [http-nio-8080-exec-10] INFO  com.example.course.CourseApplication - Fetched All Courses.
+2021-04-30 11:07:36 [http-nio-8080-exec-4] INFO  com.example.course.CourseApplication - Fetched All Courses.
+2021-04-30 11:08:10 [http-nio-8080-exec-2] INFO  com.example.course.CourseApplication - Fetched All Courses.
+2021-04-30 11:08:20 [http-nio-8080-exec-3] INFO  com.example.course.CourseApplication - Fetched All Courses.
+2021-04-30 11:08:39 [http-nio-8080-exec-8] INFO  com.example.course.CourseApplication - Fetched All Courses.
+2021-04-30 11:09:38 [http-nio-8080-exec-10] INFO  com.example.course.CourseApplication - Fetched All Courses.
+2021-04-30 11:13:40 [http-nio-8080-exec-4] INFO  com.example.course.CourseApplication - Fetched All Courses.
+2021-04-30 12:58:55 [http-nio-8080-exec-2] INFO  com.example.course.CourseApplication - Fetched All Courses.
+2021-04-30 12:59:16 [http-nio-8080-exec-5] INFO  com.example.course.CourseApplication - Fetched All Courses.
+2021-04-30 13:13:04 [http-nio-8080-exec-7] INFO  com.example.course.CourseApplication - Fetched All Courses.
+2021-04-30 13:27:11 [http-nio-8080-exec-10] INFO  com.example.course.CourseApplication - New Course Added -> Angular 
+2021-04-30 13:27:11 [http-nio-8080-exec-1] INFO  com.example.course.CourseApplication - Fetched All Courses.
+2021-04-30 13:33:26 [http-nio-8080-exec-6] INFO  com.example.course.CourseApplication - Fetched All Courses.
+2021-04-30 13:37:06 [http-nio-8080-exec-5] INFO  com.example.course.CourseApplication - Fetched All Courses.
+2021-04-30 13:37:20 [http-nio-8080-exec-3] INFO  com.example.course.CourseApplication - Fetched All Courses.
+2021-04-30 14:29:07 [http-nio-8080-exec-8] INFO  com.example.course.CourseApplication - Fetched All Courses.
+2021-04-30 14:50:14 [http-nio-8080-exec-10] INFO  com.example.course.CourseApplication - Fetched All Courses.
+2021-04-30 14:50:23 [HikariPool-1 housekeeper] WARN  com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=20m57s854ms242µs700ns).
+2021-04-30 14:50:37 [http-nio-8080-exec-4] INFO  com.example.course.CourseApplication - Fetched All Courses.
+2021-04-30 14:50:38 [http-nio-8080-exec-6] INFO  com.example.course.CourseApplication - Fetched All Courses.
+2021-04-30 14:54:01 [http-nio-8080-exec-5] INFO  com.example.course.CourseApplication - Fetched All Courses.
+2021-04-30 14:54:49 [http-nio-8080-exec-7] INFO  com.example.course.CourseApplication - Fetched All Courses.
+2021-04-30 14:59:38 [http-nio-8080-exec-9] INFO  com.example.course.CourseApplication - Fetched All Courses.
+2021-04-30 14:59:41 [http-nio-8080-exec-10] INFO  com.example.course.CourseApplication - Fetched All Courses.
+2021-04-30 15:10:07 [http-nio-8080-exec-4] INFO  com.example.course.CourseApplication - Fetched All Courses.
+2021-04-30 15:11:44 [http-nio-8080-exec-2] INFO  com.example.course.CourseApplication - Fetched All Courses.
+2021-04-30 15:12:24 [http-nio-8080-exec-5] INFO  com.example.course.CourseApplication - Fetched All Courses.
+2021-04-30 15:12:35 [http-nio-8080-exec-3] INFO  com.example.course.CourseApplication - Fetched All Courses.
+2021-04-30 15:14:28 [http-nio-8080-exec-8] INFO  com.example.course.CourseApplication - Fetched All Courses.
+2021-04-30 15:15:02 [http-nio-8080-exec-9] INFO  com.example.course.CourseApplication - Fetched All Courses.
+2021-04-30 15:16:17 [http-nio-8080-exec-1] INFO  com.example.course.CourseApplication - Fetched All Courses.
+2021-04-30 15:16:55 [http-nio-8080-exec-4] INFO  com.example.course.CourseApplication - Fetched All Courses.
+2021-04-30 15:17:49 [http-nio-8080-exec-6] INFO  com.example.course.CourseApplication - Fetched All Courses.
+2021-04-30 15:18:08 [http-nio-8080-exec-2] INFO  com.example.course.CourseApplication - Fetched All Courses.
+2021-04-30 15:19:47 [http-nio-8080-exec-3] INFO  com.example.course.CourseApplication - Fetched All Courses.
+2021-04-30 15:20:03 [http-nio-8080-exec-8] INFO  com.example.course.CourseApplication - Course Updated -> Angular edited
+2021-04-30 15:20:03 [http-nio-8080-exec-9] INFO  com.example.course.CourseApplication - Fetched All Courses.
+2021-04-30 15:20:16 [http-nio-8080-exec-1] INFO  com.example.course.CourseApplication - Course Updated -> Angular edited
+2021-04-30 15:20:16 [http-nio-8080-exec-4] INFO  com.example.course.CourseApplication - Fetched All Courses.
+2021-04-30 15:23:07 [http-nio-8080-exec-2] INFO  com.example.course.CourseApplication - Fetched All Courses.
+2021-04-30 15:23:16 [http-nio-8080-exec-5] INFO  com.example.course.CourseApplication - Fetched All Courses.
+2021-04-30 15:30:12 [http-nio-8080-exec-7] INFO  com.example.course.CourseApplication - Fetched All Courses.
+2021-04-30 15:30:24 [http-nio-8080-exec-9] INFO  com.example.course.CourseApplication - Fetched All Courses.
+2021-04-30 15:30:28 [http-nio-8080-exec-10] INFO  com.example.course.CourseApplication - Fetched All Courses.
+2021-04-30 15:31:49 [restartedMain] INFO  com.example.course.CourseApplication - Starting CourseApplication using Java 11.0.1 on DESKTOP-OLRSLGO with PID 17112 (C:\Users\Jigar\IdeaProjects\course\target\classes started by Jigar in C:\Users\Jigar\IdeaProjects\course)
+2021-04-30 15:31:49 [restartedMain] INFO  com.example.course.CourseApplication - No active profile set, falling back to default profiles: default
+2021-04-30 15:31:49 [restartedMain] INFO  o.s.b.d.e.DevToolsPropertyDefaultsPostProcessor - Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2021-04-30 15:31:49 [restartedMain] INFO  o.s.b.d.e.DevToolsPropertyDefaultsPostProcessor - For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2021-04-30 15:31:50 [restartedMain] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Bootstrapping Spring Data JDBC repositories in DEFAULT mode.
+2021-04-30 15:31:50 [restartedMain] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 11 ms. Found 0 JDBC repository interfaces.
+2021-04-30 15:31:50 [restartedMain] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat initialized with port(s): 8080 (http)
+2021-04-30 15:31:50 [restartedMain] INFO  o.a.catalina.core.StandardService - Starting service [Tomcat]
+2021-04-30 15:31:50 [restartedMain] INFO  o.a.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/9.0.45]
+2021-04-30 15:31:50 [restartedMain] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+2021-04-30 15:31:50 [restartedMain] INFO  o.s.b.w.s.c.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 876 ms
+2021-04-30 15:31:51 [restartedMain] INFO  o.s.s.c.ThreadPoolTaskExecutor - Initializing ExecutorService 'applicationTaskExecutor'
+2021-04-30 15:31:51 [restartedMain] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Starting...
+2021-04-30 15:31:51 [restartedMain] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Start completed.
+2021-04-30 15:31:51 [restartedMain] INFO  o.s.b.d.a.OptionalLiveReloadServer - LiveReload server is running on port 35729
+2021-04-30 15:31:51 [restartedMain] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat started on port(s): 8080 (http) with context path ''
+2021-04-30 15:31:51 [restartedMain] INFO  com.example.course.CourseApplication - Started CourseApplication in 1.976 seconds (JVM running for 3.015)
+2021-04-30 15:32:14 [http-nio-8080-exec-1] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+2021-04-30 15:32:14 [http-nio-8080-exec-1] INFO  o.s.web.servlet.DispatcherServlet - Initializing Servlet 'dispatcherServlet'
+2021-04-30 15:32:14 [http-nio-8080-exec-1] INFO  o.s.web.servlet.DispatcherServlet - Completed initialization in 1 ms
+2021-04-30 15:32:14 [http-nio-8080-exec-1] INFO  com.example.course.CourseApplication - Fetched All Courses.
+2021-04-30 15:32:38 [http-nio-8080-exec-7] INFO  com.example.course.CourseApplication - Course Updated -> Angular updated
+2021-04-30 15:32:38 [http-nio-8080-exec-9] INFO  com.example.course.CourseApplication - Fetched All Courses.
+2021-04-30 15:38:14 [http-nio-8080-exec-2] INFO  com.example.course.CourseApplication - Fetched All Courses.
+2021-04-30 15:38:44 [http-nio-8080-exec-8] INFO  com.example.course.CourseApplication - Fetched All Courses.
+2021-04-30 15:39:22 [http-nio-8080-exec-1] INFO  com.example.course.CourseApplication - Course Updated -> Angular update
+2021-04-30 15:39:22 [http-nio-8080-exec-4] INFO  com.example.course.CourseApplication - Fetched All Courses.
+2021-04-30 15:40:05 [http-nio-8080-exec-3] INFO  com.example.course.CourseApplication - Fetched All Courses.
+2021-04-30 15:40:20 [http-nio-8080-exec-9] INFO  com.example.course.CourseApplication - Course Updated -> Angular edit
+2021-04-30 15:40:20 [http-nio-8080-exec-6] INFO  com.example.course.CourseApplication - Fetched All Courses.
+2021-04-30 15:40:58 [http-nio-8080-exec-8] INFO  com.example.course.CourseApplication - Course Deleted -> 4
+2021-04-30 15:40:59 [http-nio-8080-exec-5] INFO  com.example.course.CourseApplication - Fetched All Courses.
+2021-04-30 15:42:22 [http-nio-8080-exec-4] INFO  com.example.course.CourseApplication - New Course Added -> Angular 
+2021-04-30 15:42:22 [http-nio-8080-exec-3] INFO  com.example.course.CourseApplication - Fetched All Courses.
+2021-04-30 16:03:54 [http-nio-8080-exec-6] INFO  com.example.course.CourseApplication - User Controller Called-- Login User
+2021-04-30 16:04:07 [http-nio-8080-exec-2] INFO  com.example.course.CourseApplication - Fetched All Courses.
+2021-04-30 16:04:43 [http-nio-8080-exec-8] INFO  com.example.course.CourseApplication - Fetched All Courses.
+2021-04-30 16:06:09 [http-nio-8080-exec-1] INFO  com.example.course.CourseApplication - New Course Added -> spring
+2021-04-30 16:06:09 [http-nio-8080-exec-4] INFO  com.example.course.CourseApplication - Fetched All Courses.
+2021-04-30 16:06:27 [http-nio-8080-exec-7] INFO  com.example.course.CourseApplication - Course Updated -> spring updated
+2021-04-30 16:06:27 [http-nio-8080-exec-9] INFO  com.example.course.CourseApplication - Fetched All Courses.
+2021-04-30 16:06:37 [http-nio-8080-exec-2] INFO  com.example.course.CourseApplication - Course Deleted -> 6
+2021-04-30 16:06:38 [http-nio-8080-exec-8] INFO  com.example.course.CourseApplication - Fetched All Courses.
+2021-04-30 16:09:24 [http-nio-8080-exec-10] INFO  com.example.course.CourseApplication - Fetched All Courses.
+2021-04-30 16:15:06 [http-nio-8080-exec-3] INFO  com.example.course.CourseApplication - Fetched All Trainers.
