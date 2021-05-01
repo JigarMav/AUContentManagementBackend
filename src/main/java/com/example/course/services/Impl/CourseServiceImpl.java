@@ -12,7 +12,12 @@ import org.springframework.stereotype.Service;
 
 @Service
 public class CourseServiceImpl implements CourseService {
-	
+
+	@Override
+	public List<Course> getCoursesByTrainer(int id) {
+		return this.coursedao.getCoursesByTrainer(id);
+	}
+
 	@Autowired
 	CourseDaoImpl coursedao;
 	

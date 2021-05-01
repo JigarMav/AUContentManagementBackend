@@ -37,7 +37,7 @@ public class UserController {
 
 	@PostMapping( path = "/login", consumes = "application/json")
 	@ResponseBody
-	public void  loginUser(@RequestBody User user) {
+	public int  loginUser(@RequestBody User user) {
 		LoggerConfig.LOGGER.info("User Controller Called-- Login User");
 
 //		token = token.substring(0, 20);
@@ -55,9 +55,13 @@ public class UserController {
 
 		if(u != null ) {
 			System.out.println("user already present");
+			return u.getUserID();
 		}else {
-			userService.addUser(user);
+
 			LoggerConfig.LOGGER.info("new user added");
+			userService.addUser(user);
+			User newUser = userService.getUserByEmail(user.getEmail());
+			return newUser.getUserID();
 		}
 
 //		ResponseEntity responseEntity = new ResponseEntity(msg,responseHeaders,httpstatus);

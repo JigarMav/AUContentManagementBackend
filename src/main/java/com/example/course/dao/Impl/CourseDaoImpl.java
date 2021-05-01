@@ -30,6 +30,18 @@ public class CourseDaoImpl implements CourseDao {
 	}
 
 	@Override
+	public List<Course> getCoursesByTrainer(int id) {
+		String query = "SELECT courses.courseID,courseDesc,courseLocation, courses.courseName ,coursePrerequisites ,courseSkills, last_modified" +
+				"   FROM courses" +
+				"   left join trainers" +
+				"   on  trainers.courseID= courses.courseID" +
+				"   where trainerID=?";
+
+		LoggerConfig.LOGGER.info("Fetched Courses for trainer "+id);
+		return jdbcTemplate.query(query, new CourseRowMapper(),id);
+	}
+
+	@Override
 	public Course getCourseByName(String name) {
 		String query = "SELECT * FROM courses WHERE courseName = ?";
 		return jdbcTemplate.queryForObject(query, new CourseRowMapper(), name); 

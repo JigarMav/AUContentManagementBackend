@@ -51,6 +51,11 @@ public class TrainingMaterialController {
 	public void addMaterial(@RequestParam("file") MultipartFile file,
 							@RequestParam("courseId") int courseId,
 							@RequestParam("trainerId") int trainerId) {
+		System.out.println(file.getName());
+		System.out.println(courseId);
+		System.out.println(trainerId);
+//		int cid = Integer.parseInt(courseId);
+//		int tid = Integer.parseInt(trainerId);
 		materialService.addMaterial(file, courseId,trainerId);
 	}
 	

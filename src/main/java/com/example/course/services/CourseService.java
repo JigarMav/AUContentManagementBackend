@@ -7,14 +7,14 @@ import java.util.List;
 
 public interface CourseService {
 
-	public List<Course> getAllCourses();
+	List<Course> getAllCourses();
+	List<Course> getCoursesByTrainer(int id);
+	Course getCourseByName(String name);
 	
-	public Course getCourseByName(String name);
+	void addCourse(Course course);
 	
-	public void addCourse(Course course);
+	void updateCourse(Course course);
 	
-	public void updateCourse(Course course);
-	
-	public void deleteCourse(int id);
+	void deleteCourse(int id);
 	
 }

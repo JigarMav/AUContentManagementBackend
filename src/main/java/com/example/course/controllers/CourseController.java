@@ -29,7 +29,12 @@ public class CourseController {
 	public List<Course> getAllCourses(){
 		return courseService.getAllCourses();
 	}
-	
+
+	@GetMapping(value= "/trainer/{id}")
+	public List<Course> getCoursesByTrainer(@PathVariable("id") int id){
+		return courseService.getCoursesByTrainer(id);
+	}
+
 	@GetMapping(value= "/{name}")
 	public Course getCourseByName(@PathVariable("name") String name) {
 		return courseService.getCourseByName(name);

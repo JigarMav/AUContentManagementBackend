@@ -8,13 +8,13 @@ import java.util.List;
 
 public interface CourseDao {
 
-	public List<Course> getAllCourses();
+	List<Course> getAllCourses();
 	
-	public Course getCourseByName(String name);
+	Course getCourseByName(String name);
+	List<Course> getCoursesByTrainer(int id);
+	void addCourse(Course course);
 	
-	public void addCourse(Course course);
+	void updateCourse(Course course);
 	
-	public void updateCourse(Course course);
-	
-	public void deleteCourse(int id);
+	void deleteCourse(int id);
 }
