@@ -27,6 +27,12 @@ public class UserServiceImpl implements UserService {
 	}
 
 	@Override
+	public User getUserById(int id) {
+		System.out.println("getuser"+id);
+		return userdao.getUserById(id);
+	}
+
+	@Override
 	public void addUser(User user) {
 
 		userdao.addUser(user);

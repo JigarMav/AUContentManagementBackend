@@ -4,7 +4,10 @@ package com.example.course.controllers;
 import java.util.List;
 
 import com.example.course.models.TrainingMaterial;
+import com.example.course.models.User;
+import com.example.course.services.Impl.TrainerServiceImpl;
 import com.example.course.services.Impl.TrainingMaterialServiceImpl;
+import com.example.course.services.Impl.UserServiceImpl;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.CrossOrigin;
 import org.springframework.web.bind.annotation.DeleteMapping;
@@ -26,7 +29,8 @@ public class TrainingMaterialController {
 
 	@Autowired
 	TrainingMaterialServiceImpl materialService;
-	
+	UserServiceImpl userService;
+
 	@GetMapping(value= "/")
 	public List<TrainingMaterial> getAllMaterial() {
 		return materialService.getAllMaterial();
@@ -38,9 +42,15 @@ public class TrainingMaterialController {
 	}
 	
 	@GetMapping(value= "/{id}")
-	public List<TrainingMaterial> getMaterialByCourseID(@PathVariable("id") int id) {
+	public List<TrainingMaterial> getActiveMaterialByCourseID(@PathVariable("id") int id) {
+		return materialService.getActiveMaterialByCourseID(id);
+	}
+
+	@GetMapping(value= "/course/all/{id}")
+	public List<TrainingMaterial> getMaterialsByCourseID(@PathVariable("id") int id) {
 		return materialService.getMaterialByCourseID(id);
 	}
+
 	@GetMapping(value= "/trainer/{id}")
 	public List<TrainingMaterial> getMaterialByTrainerID(@PathVariable("id") int id) {
 		return materialService.getMaterialByTrainerID(id);
@@ -50,13 +60,16 @@ public class TrainingMaterialController {
 	@ResponseBody
 	public void addMaterial(@RequestParam("file") MultipartFile file,
 							@RequestParam("courseId") int courseId,
-							@RequestParam("trainerId") int trainerId) {
+							@RequestParam("trainerId") int trainerId,
+							@RequestParam("trainerName") String trainerName) {
 		System.out.println(file.getName());
 		System.out.println(courseId);
 		System.out.println(trainerId);
+		System.out.println(trainerName);
+
 //		int cid = Integer.parseInt(courseId);
 //		int tid = Integer.parseInt(trainerId);
-		materialService.addMaterial(file, courseId,trainerId);
+		materialService.addMaterial(file, courseId,trainerId,trainerName);
 	}
 	
 	@DeleteMapping(value= "/delete/{mid}")

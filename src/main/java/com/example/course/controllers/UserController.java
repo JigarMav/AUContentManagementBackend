@@ -34,7 +34,11 @@ public class UserController {
 		LoggerConfig.LOGGER.info("User Request LogIn ->" + email);
 		return userService.getUserByEmail(email);
 	}
-
+	@GetMapping(value= "/get/{id}")
+	public User getUserByEmail(@PathVariable("id") int id) {
+		LoggerConfig.LOGGER.info("User Request  ->" + id);
+		return userService.getUserById(id);
+	}
 	@PostMapping( path = "/login", consumes = "application/json")
 	@ResponseBody
 	public int  loginUser(@RequestBody User user) {

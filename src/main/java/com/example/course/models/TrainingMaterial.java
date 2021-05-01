@@ -18,29 +18,16 @@ public class TrainingMaterial {
 
 	private int courseID;
 	private int trainerID;
+	private String trainerName;
 	private String fileName;
 	private String fileType;
 	private byte[] file;
 	private String active_flag;
 	private String status;
+	private Timestamp created_on;
 	private Timestamp last_modified;
 
 
-	public TrainingMaterial(int courseID, int trainerID, String fileName, String fileType, byte[] file, String active_flag, String status, Timestamp last_modified) {
-		this.courseID = courseID;
-		this.trainerID = trainerID;
-		this.fileName = fileName;
-		this.fileType = fileType;
-		this.file = file;
-		this.active_flag = active_flag;
-		this.status = status;
-		this.last_modified = last_modified;
-	}
 
-
-
-
-
-		
 	
 }

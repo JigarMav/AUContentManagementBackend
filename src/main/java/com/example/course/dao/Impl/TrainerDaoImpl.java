@@ -23,9 +23,7 @@ public class TrainerDaoImpl implements TrainerDao {
 	@Override
 	public List<Trainer> getAllTrainers() {
 		//String query = "SELECT * FROM users JOIN trainers ON users.userID = trainers.trainerID";
-		String query = "SELECT * FROM courses JOIN " + 
-				"(SELECT * FROM users JOIN trainers ON users.userID = trainers.trainerID) AS trainer " +
-				"ON courses.courseID = trainer.courseID ";
+		String query = "SELECT * FROM courses JOIN (SELECT * FROM users JOIN trainers ON users.userID = trainers.trainerID) AS trainer ON courses.courseID = trainer.courseID ";
 		
 		LoggerConfig.LOGGER.info("Fetched All Trainers.");
 		return jdbcTemplate.query(query, new TrainerRowMapper());

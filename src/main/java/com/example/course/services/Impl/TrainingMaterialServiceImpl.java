@@ -33,8 +33,12 @@ public class TrainingMaterialServiceImpl implements TrainingMaterialService {
 	}
 
 	@Override
-	public void addMaterial(MultipartFile file, int courseId,int trainerId) {
-		materialdao.addMaterial(file, courseId,trainerId);
+	public List<TrainingMaterial> getActiveMaterialByCourseID(int id){
+		return materialdao.getActiveMaterialByCourseID(id);
+	}
+	@Override
+	public void addMaterial(MultipartFile file, int courseId,int trainerId,String trainerName) {
+		materialdao.addMaterial(file, courseId,trainerId,trainerName);
 		
 	}
 

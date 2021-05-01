@@ -3,6 +3,7 @@ package com.example.course.dao.Impl;
 import java.io.IOException;
 import java.sql.Blob;
 import java.sql.SQLException;
+import java.sql.Timestamp;
 import java.util.List;
 import java.util.*;
 import javax.sql.rowset.serial.SerialException;
@@ -10,6 +11,7 @@ import javax.sql.rowset.serial.SerialException;
 import com.example.course.LoggerConfig;
 import com.example.course.dao.TrainingMaterialDao;
 import com.example.course.models.TrainingMaterial;
+import com.example.course.models.User;
 import com.example.course.rowmapper.TrainingMaterialRowMapper;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.jdbc.core.JdbcTemplate;
@@ -46,10 +48,18 @@ public class TrainingMaterialDaoImpl implements TrainingMaterialDao {
 
 	//Fetches only new material for particular course
 	@Override
-	public List<TrainingMaterial> getMaterialByCourseID(int id) {
+	public List<TrainingMaterial> getActiveMaterialByCourseID(int id) {
 		String query = "SELECT * FROM training_materials WHERE courseId = ? AND active_flag = ?";
 		return jdbcTemplate.query(query, new TrainingMaterialRowMapper(), id, "Y");
 	}
+
+//gets all materials for courseid
+	@Override
+	public List<TrainingMaterial> getMaterialByCourseID(int id) {
+		String query = "SELECT * FROM training_materials WHERE courseId = ? ";
+		return jdbcTemplate.query(query, new TrainingMaterialRowMapper(), id);
+	}
+
 	//Fetches only new material for particular course
 	@Override
 	public List<TrainingMaterial> getMaterialByTrainerID(int id) {
@@ -58,19 +68,20 @@ public class TrainingMaterialDaoImpl implements TrainingMaterialDao {
 	}
 
 	@Override
-	public void addMaterial(MultipartFile file, int courseId,int trainerId) {
+	public void addMaterial(MultipartFile file, int courseId,int trainerId,String trainerName) {
 //		System.out.println(file.getName() +"---"+ courseId);
 		String prequery = "UPDATE training_materials SET active_flag = ?, status = ? WHERE courseId = ? AND trainerId=? AND active_flag = ?";
 		jdbcTemplate.update(prequery, "N","Old",courseId,trainerId,"Y");
 		
-		String query = "INSERT INTO training_materials(courseId,trainerId, fileName,fileType,file,active_flag,status) VALUES (?,?,?,?,?,?,?)";
+		String query = "INSERT INTO training_materials(courseId,trainerId,trainerName, fileName,fileType,file,active_flag,status,created_on,last_modified) VALUES (?,?,?,?,?,?,?,?,?,?)";
 		
 		try {
 			
 			byte[] bytes = file.getBytes();
 			Blob blob;
 			blob = new javax.sql.rowset.serial.SerialBlob(bytes);
-			jdbcTemplate.update(query, courseId,trainerId,file.getOriginalFilename(),file.getContentType(), blob,"Y","New");
+			Timestamp tt = new Timestamp(System.currentTimeMillis());
+			jdbcTemplate.update(query, courseId,trainerId,trainerName,file.getOriginalFilename(),file.getContentType(), blob,"Y","New",tt,tt);
 			
 			LoggerConfig.LOGGER.info("Added New Material -> " + courseId+" by trainer -"+trainerId);
 			

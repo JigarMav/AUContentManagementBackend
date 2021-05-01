@@ -10,14 +10,15 @@ import org.springframework.web.multipart.MultipartFile;
 
 public interface TrainingMaterialDao {
 
-	public List<TrainingMaterial> getAllMaterial();
+	List<TrainingMaterial> getAllMaterial();
 	
-	public List<TrainingMaterial> getMaterialActive();
+	List<TrainingMaterial> getMaterialActive();
 	
-	public List<TrainingMaterial> getMaterialByCourseID(int id);
-	public List<TrainingMaterial> getMaterialByTrainerID(int id) ;
+	List<TrainingMaterial> getMaterialByCourseID(int id);
+	public List<TrainingMaterial> getActiveMaterialByCourseID(int id);
+	List<TrainingMaterial> getMaterialByTrainerID(int id) ;
 
-		public void addMaterial(MultipartFile file, int courseId,int trainerId);
+	void addMaterial(MultipartFile file, int courseId,int trainerId,String trainerName) ;
 	
-	public void deleteMaterial(int id);
+	void deleteMaterial(int id);
 }

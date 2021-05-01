@@ -43,6 +43,18 @@ public class UserDaoImpl implements UserDao {
 		}
 		return u;
 	}
+	@Override
+	public User getUserById(int id) {
+		String query = "SELECT * FROM users WHERE userID = ?";
+		User u = null;
+		try {
+			return u = jdbcTemplate.queryForObject(query, new UserRowMapper(), id);
+		}
+		catch(DataAccessException e) {
+			LoggerConfig.LOGGER.error("User Not Valid! => " + id);
+		}
+		return u;
+	}
 
 	@Override
 	public void addUser(User user) {
