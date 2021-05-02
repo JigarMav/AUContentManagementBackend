@@ -5,15 +5,7 @@ import java.util.List;
 import com.example.course.models.Trainer;
 import com.example.course.services.Impl.TrainerServiceImpl;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.web.bind.annotation.CrossOrigin;
-import org.springframework.web.bind.annotation.DeleteMapping;
-import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.PathVariable;
-import org.springframework.web.bind.annotation.PostMapping;
-import org.springframework.web.bind.annotation.RequestBody;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RestController;
-
+import org.springframework.web.bind.annotation.*;
 
 
 @RestController
@@ -33,11 +25,19 @@ public class TrainerController {
 	public List<Trainer> getTrainerByCourseID(@PathVariable("id") int id) {
 		return trainerService.getTrainerByCourseID(id);
 	}
-	
+
 	@PostMapping(value= "/add")
-	public void addTrainer(@PathVariable("tid") int tid, @PathVariable("cid") int cid) {
-		trainerService.addTrainer(tid,cid);
+	public void addTrainer(@RequestBody Trainer trainer) {
+		  trainerService.addTrainer(trainer);
 	}
+
+	@PostMapping(value= "/add/afterCourse")
+	@ResponseBody
+	public void addTrainerAfterCourse(@RequestParam("tid") int tid, @RequestParam("cid") int cid) {
+		trainerService.addTrainerAfterCourse(tid, cid);
+
+	}
+
 	
 	@DeleteMapping(value= "/delete/{tid}/{cid}")
 	public void deleteTrainer(@PathVariable("tid") int tid, @PathVariable("cid") int cid) {

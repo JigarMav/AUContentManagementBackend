@@ -3,6 +3,7 @@ package com.example.course.services.Impl;
 import java.util.List;
 
 import com.example.course.dao.Impl.TrainingMaterialDaoImpl;
+import com.example.course.dao.TrainingMaterialDao;
 import com.example.course.models.TrainingMaterial;
 import com.example.course.services.TrainingMaterialService;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -20,7 +21,7 @@ public class TrainingMaterialServiceImpl implements TrainingMaterialService {
 	}
 
 	@Autowired
-	TrainingMaterialDaoImpl materialdao;
+	TrainingMaterialDao materialdao;
 	
 	@Override
 	public List<TrainingMaterial> getAllMaterial() {

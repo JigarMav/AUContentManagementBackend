@@ -43,18 +43,21 @@ public class CourseDaoImpl implements CourseDao {
 
 	@Override
 	public Course getCourseByName(String name) {
-		String query = "SELECT * FROM courses WHERE courseName = ?";
+		LoggerConfig.LOGGER.info("Get Course  -> " + name);
+		String query = "SELECT * FROM courses WHERE courseName = ? limit 1";
 		return jdbcTemplate.queryForObject(query, new CourseRowMapper(), name); 
 	}
 
 	@Override
-	public void addCourse(Course course) {
+	public Course addCourse(Course course) {
 		String query = "INSERT INTO courses (courseName, courseDesc, courseSkills,coursePrerequisites,courseLocation,last_modified)" +
 						" VALUES (?,?,?,?,?,NOW())";
 		jdbcTemplate.update(query, course.getCourseName(),course.getCourseDesc(),course.getCourseSkills(),
 							course.getCoursePrerequisites(),course.getCourseLocation());
-		
+
 		LoggerConfig.LOGGER.info("New Course Added -> " + course.getCourseName());
+
+		return this.getCourseByName(course.getCourseName());
 	}
 
 	@Override

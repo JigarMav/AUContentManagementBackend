@@ -3,6 +3,7 @@ package com.example.course.services.Impl;
 import java.util.List;
 
 import com.example.course.dao.Impl.TrainerDaoImpl;
+import com.example.course.dao.TrainerDao;
 import com.example.course.models.Trainer;
 import com.example.course.services.TrainerService;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -14,7 +15,7 @@ import org.springframework.stereotype.Service;
 public class TrainerServiceImpl implements TrainerService {
 
 	@Autowired
-	TrainerDaoImpl trainerdao;
+	TrainerDao trainerdao;
 	
 	@Override
 	public List<Trainer> getAllTrainers() {
@@ -27,9 +28,14 @@ public class TrainerServiceImpl implements TrainerService {
 	}
 
 	@Override
-	public void addTrainer(int tid,int cid) {
-		trainerdao.addTrainer(tid,cid);
-		
+	public void addTrainer(Trainer trainer) {
+		trainerdao.addTrainer(trainer);
+
+	}
+
+	@Override
+	public void addTrainerAfterCourse(int tid, int cid) {
+		trainerdao.addTrainerAfterCourse(tid, cid);
 	}
 
 	@Override

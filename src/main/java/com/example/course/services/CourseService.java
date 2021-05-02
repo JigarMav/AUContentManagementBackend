@@ -11,7 +11,7 @@ public interface CourseService {
 	List<Course> getCoursesByTrainer(int id);
 	Course getCourseByName(String name);
 	
-	void addCourse(Course course);
+	Course addCourse(Course course);
 	
 	void updateCourse(Course course);
 	

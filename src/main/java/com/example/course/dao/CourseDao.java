@@ -12,7 +12,7 @@ public interface CourseDao {
 	
 	Course getCourseByName(String name);
 	List<Course> getCoursesByTrainer(int id);
-	void addCourse(Course course);
+	Course addCourse(Course course);
 	
 	void updateCourse(Course course);
 	

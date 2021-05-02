@@ -2,7 +2,7 @@ package com.example.course.services.Impl;
 
 import java.util.List;
 
-import com.example.course.dao.Impl.CourseDaoImpl;
+import com.example.course.dao.CourseDao;
 import com.example.course.models.Course;
 import com.example.course.services.CourseService;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -19,7 +19,7 @@ public class CourseServiceImpl implements CourseService {
 	}
 
 	@Autowired
-	CourseDaoImpl coursedao;
+	CourseDao coursedao;
 	
 	@Override
 	public List<Course> getAllCourses() {
@@ -32,8 +32,8 @@ public class CourseServiceImpl implements CourseService {
 	}
 
 	@Override
-	public void addCourse(Course course) {
-		coursedao.addCourse(course);
+	public Course addCourse(Course course) {
+		return coursedao.addCourse(course);
 		
 	}
 
