@@ -94,7 +94,7 @@ public class TrainingMaterialDaoImpl implements TrainingMaterialDao {
 
 	@Override
 	public void deleteMaterial(int id) {
-		String query = "UPDATE training_materials SET active_flag = ?, status = ? WHERE materialID = ?";
+		String query = "UPDATE training_materials SET active_flag = ?, status = ?,last_modified=NOW() WHERE materialID = ?";
 		jdbcTemplate.update(query, "N","Deleted",id);
 		
 		LoggerConfig.LOGGER.info("Deleted Material -> " + id);

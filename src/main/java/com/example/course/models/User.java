@@ -1,4 +1,12 @@
 package com.example.course.models;
+
+import lombok.Getter;
+import lombok.Setter;
+import lombok.ToString;
+
+@ToString
+@Getter
+@Setter
 public class User {
 
 	private int userID;
@@ -23,38 +31,7 @@ public class User {
 		this.userLocation = userLocation;
 	}
 
-	public int getUserID() {
-		return userID;
-	}
 
-	public void setUserID(int userID) {
-		this.userID = userID;
-	}
-
-	public String getUserName() {
-		return userName;
-	}
-
-	public void setUserName(String userName) {
-		this.userName = userName;
-	}
-
-	public String getEmail() {
-		return email;
-	}
-
-	public void setEmail(String email) {
-		this.email = email;
-	}
-
-	public String getUserLocation() {
-		return userLocation;
-	}
-
-
-	public void setUserLocation(String userLocation) {
-		this.userLocation = userLocation;
-	}
 
 	
 	

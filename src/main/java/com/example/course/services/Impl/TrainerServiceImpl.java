@@ -27,8 +27,8 @@ public class TrainerServiceImpl implements TrainerService {
 	}
 
 	@Override
-	public void addTrainer(Trainer trainer) {
-		trainerdao.addTrainer(trainer);
+	public void addTrainer(int tid,int cid) {
+		trainerdao.addTrainer(tid,cid);
 		
 	}
 

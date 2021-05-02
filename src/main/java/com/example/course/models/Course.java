@@ -1,7 +1,15 @@
 package com.example.course.models;
 
-import java.sql.Timestamp;
+import lombok.Getter;
+import lombok.NoArgsConstructor;
+import lombok.Setter;
+import lombok.ToString;
 
+import java.sql.Timestamp;
+@Getter
+@Setter
+@NoArgsConstructor
+@ToString
 public class Course {
 
 	private int courseID;
@@ -11,50 +19,15 @@ public class Course {
 	private String coursePrerequisites;
 	private String courseLocation;
 	private Timestamp last_modified;
-	
-	public int getCourseID() {
-		return courseID;
-	}
-	public void setCourseID(int courseID) {
-		this.courseID = courseID;
-	}
-	public String getCourseName() {
-		return courseName;
-	}
-	public void setCourseName(String courseName) {
+
+	public Course(String courseName, String courseDesc, String courseSkills,
+				  String coursePrerequisites, String courseLocation,
+				  Timestamp last_modified) {
 		this.courseName = courseName;
-	}
-	public String getCourseDesc() {
-		return courseDesc;
-	}
-	public void setCourseDesc(String courseDesc) {
 		this.courseDesc = courseDesc;
-	}
-	public String getCourseSkills() {
-		return courseSkills;
-	}
-	public void setCourseSkills(String courseSkills) {
 		this.courseSkills = courseSkills;
-	}
-	public String getCoursePrerequisites() {
-		return coursePrerequisites;
-	}
-	public void setCoursePrerequisites(String coursePrerequisites) {
 		this.coursePrerequisites = coursePrerequisites;
-	}
-	public String getCourseLocation() {
-		return courseLocation;
-	}
-	public void setCourseLocation(String courseLocation) {
 		this.courseLocation = courseLocation;
-	}
-	
-	public Timestamp getLast_modified() {
-		return last_modified;
-	}
-	public void setLast_modified(Timestamp last_modified) {
 		this.last_modified = last_modified;
 	}
-	
-	
 }

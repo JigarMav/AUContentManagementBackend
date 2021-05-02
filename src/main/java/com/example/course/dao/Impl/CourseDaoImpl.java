@@ -49,8 +49,8 @@ public class CourseDaoImpl implements CourseDao {
 
 	@Override
 	public void addCourse(Course course) {
-		String query = "INSERT INTO courses (courseName, courseDesc, courseSkills,coursePrerequisites,courseLocation)" +
-						" VALUES (?,?,?,?,?)";
+		String query = "INSERT INTO courses (courseName, courseDesc, courseSkills,coursePrerequisites,courseLocation,last_modified)" +
+						" VALUES (?,?,?,?,?,NOW())";
 		jdbcTemplate.update(query, course.getCourseName(),course.getCourseDesc(),course.getCourseSkills(),
 							course.getCoursePrerequisites(),course.getCourseLocation());
 		
@@ -61,7 +61,7 @@ public class CourseDaoImpl implements CourseDao {
 	public void updateCourse(Course course) {
 		int cid = course.getCourseID();
 		System.out.println("update for id "+cid);
-		String query = "UPDATE courses SET courseName = ?, courseDesc = ?, courseSkills = ?,coursePrerequisites = ?,courseLocation = ?" +
+		String query = "UPDATE courses SET courseName = ?, courseDesc = ?, courseSkills = ?,coursePrerequisites = ?,courseLocation = ?,last_modified=NOW()" +
 						" WHERE courseID = ?";
 		jdbcTemplate.update(query, course.getCourseName(),course.getCourseDesc(),course.getCourseSkills(),
 							course.getCoursePrerequisites(),course.getCourseLocation(), course.getCourseID());

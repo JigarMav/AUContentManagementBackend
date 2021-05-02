@@ -35,8 +35,8 @@ public class TrainerController {
 	}
 	
 	@PostMapping(value= "/add")
-	public void addTrainer(@RequestBody Trainer trainer) {
-		trainerService.addTrainer(trainer);
+	public void addTrainer(@PathVariable("tid") int tid, @PathVariable("cid") int cid) {
+		trainerService.addTrainer(tid,cid);
 	}
 	
 	@DeleteMapping(value= "/delete/{tid}/{cid}")

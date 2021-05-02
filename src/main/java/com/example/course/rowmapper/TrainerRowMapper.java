@@ -19,8 +19,7 @@ public class TrainerRowMapper implements RowMapper<Trainer>{
 		trainer.setUserLocation(rs.getString("userLocation"));
 		trainer.setTrainerID(rs.getInt("trainerID"));
 		trainer.setCourseID(rs.getInt("courseID"));
-		trainer.setFeedback(rs.getString("feedback"));
-		trainer.setCourseName(rs.getString("courseName"));
+
 		return trainer;
 	}
 

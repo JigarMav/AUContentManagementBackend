@@ -39,14 +39,14 @@ public class TrainerDaoImpl implements TrainerDao {
 	}
 
 	@Override
-	public void addTrainer(Trainer trainer) {
+	public void addTrainer(int tid, int cid) {
 		String query = "INSERT INTO trainers(trainerID, courseID) VALUES (?,?)";
 		try {
-			jdbcTemplate.update(query, trainer.getTrainerID(),trainer.getCourseID());
-			LoggerConfig.LOGGER.info("New Trainer Added -> " + trainer.getTrainerID());
+			jdbcTemplate.update(query, tid,cid);
+			LoggerConfig.LOGGER.info("New Trainer Added -> " + tid);
 		}
 		catch(Exception e) {
-			LoggerConfig.LOGGER.error("Error Adding New Trainer -> " + trainer.getTrainerID());
+			LoggerConfig.LOGGER.error("Error Adding New Trainer -> " + tid);
 			e.getMessage();
 		}
 	}
