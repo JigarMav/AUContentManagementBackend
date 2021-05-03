@@ -276,3 +276,273 @@ org.springframework.dao.IncorrectResultSizeDataAccessException: Incorrect result
 2021-05-03 11:59:03 [http-nio-8080-exec-1] INFO  o.s.web.servlet.DispatcherServlet - Initializing Servlet 'dispatcherServlet'
 2021-05-03 11:59:03 [http-nio-8080-exec-1] INFO  o.s.web.servlet.DispatcherServlet - Completed initialization in 1 ms
 2021-05-03 11:59:03 [http-nio-8080-exec-1] INFO  com.example.course.CourseApplication - Fetched Courses for subscribed user 11
+2021-05-03 12:09:41 [restartedMain] INFO  com.example.course.CourseApplication - Starting CourseApplication using Java 11.0.1 on DESKTOP-OLRSLGO with PID 27364 (C:\Users\Jigar\IdeaProjects\course\target\classes started by Jigar in C:\Users\Jigar\IdeaProjects\course)
+2021-05-03 12:09:41 [restartedMain] INFO  com.example.course.CourseApplication - No active profile set, falling back to default profiles: default
+2021-05-03 12:09:41 [restartedMain] INFO  o.s.b.d.e.DevToolsPropertyDefaultsPostProcessor - Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2021-05-03 12:09:41 [restartedMain] INFO  o.s.b.d.e.DevToolsPropertyDefaultsPostProcessor - For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2021-05-03 12:09:41 [restartedMain] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Bootstrapping Spring Data JDBC repositories in DEFAULT mode.
+2021-05-03 12:09:41 [restartedMain] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 11 ms. Found 0 JDBC repository interfaces.
+2021-05-03 12:09:42 [restartedMain] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat initialized with port(s): 8080 (http)
+2021-05-03 12:09:42 [restartedMain] INFO  o.a.catalina.core.StandardService - Starting service [Tomcat]
+2021-05-03 12:09:42 [restartedMain] INFO  o.a.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/9.0.45]
+2021-05-03 12:09:42 [restartedMain] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+2021-05-03 12:09:42 [restartedMain] INFO  o.s.b.w.s.c.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 793 ms
+2021-05-03 12:09:42 [restartedMain] INFO  o.s.s.c.ThreadPoolTaskExecutor - Initializing ExecutorService 'applicationTaskExecutor'
+2021-05-03 12:09:42 [restartedMain] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Starting...
+2021-05-03 12:09:42 [restartedMain] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Start completed.
+2021-05-03 12:09:42 [restartedMain] INFO  o.s.b.d.a.OptionalLiveReloadServer - LiveReload server is running on port 35729
+2021-05-03 12:09:42 [restartedMain] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat started on port(s): 8080 (http) with context path ''
+2021-05-03 12:09:42 [restartedMain] INFO  com.example.course.CourseApplication - Started CourseApplication in 1.76 seconds (JVM running for 2.524)
+2021-05-03 12:19:37 [http-nio-8080-exec-1] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+2021-05-03 12:19:37 [http-nio-8080-exec-1] INFO  o.s.web.servlet.DispatcherServlet - Initializing Servlet 'dispatcherServlet'
+2021-05-03 12:19:37 [http-nio-8080-exec-1] INFO  o.s.web.servlet.DispatcherServlet - Completed initialization in 3 ms
+2021-05-03 12:19:37 [http-nio-8080-exec-1] INFO  com.example.course.CourseApplication - Fetched All Courses.
+2021-05-03 12:19:48 [http-nio-8080-exec-4] INFO  com.example.course.CourseApplication - Fetched Courses for trainer 11
+2021-05-03 12:20:19 [http-nio-8080-exec-5] INFO  com.example.course.CourseApplication - Course Updated -> api docs
+2021-05-03 12:20:20 [http-nio-8080-exec-10] INFO  com.example.course.CourseApplication - Fetched All Courses.
+2021-05-03 12:20:24 [http-nio-8080-exec-7] INFO  com.example.course.CourseApplication - Fetched Courses for trainer 11
+2021-05-03 12:20:29 [http-nio-8080-exec-8] INFO  com.example.course.CourseApplication - Fetched All Courses.
+2021-05-03 12:20:30 [http-nio-8080-exec-9] INFO  com.example.course.CourseApplication - Fetched All Courses.
+2021-05-03 12:20:39 [http-nio-8080-exec-1] INFO  com.example.course.CourseApplication - Fetched All Courses.
+2021-05-03 12:20:46 [http-nio-8080-exec-4] INFO  com.example.course.CourseApplication - Fetched All Courses.
+2021-05-03 12:26:15 [http-nio-8080-exec-5] INFO  com.example.course.CourseApplication - Fetched Courses for trainer 11
+2021-05-03 12:26:18 [http-nio-8080-exec-10] INFO  com.example.course.CourseApplication - Fetched All Courses.
+2021-05-03 13:03:55 [http-nio-8080-exec-8] INFO  com.example.course.CourseApplication - Fetched All Courses.
+2021-05-03 13:04:30 [http-nio-8080-exec-6] INFO  com.example.course.CourseApplication - Fetched All Courses.
+2021-05-03 13:04:44 [http-nio-8080-exec-4] INFO  com.example.course.CourseApplication - Subscription Added -> For user-> 0 course-> 0
+2021-05-03 13:04:49 [http-nio-8080-exec-10] INFO  com.example.course.CourseApplication - Subscription Added -> For user-> 0 course-> 0
+2021-05-03 13:08:39 [http-nio-8080-exec-8] INFO  com.example.course.CourseApplication - Fetched All Courses.
+2021-05-03 13:08:45 [http-nio-8080-exec-6] INFO  com.example.course.CourseApplication - Subscription Added -> For user-> 0 course-> 0
+2021-05-03 13:09:28 [http-nio-8080-exec-1] INFO  com.example.course.CourseApplication - Fetched All Courses.
+2021-05-03 13:11:04 [restartedMain] INFO  com.example.course.CourseApplication - Starting CourseApplication using Java 11.0.1 on DESKTOP-OLRSLGO with PID 40448 (C:\Users\Jigar\IdeaProjects\course\target\classes started by Jigar in C:\Users\Jigar\IdeaProjects\course)
+2021-05-03 13:11:04 [restartedMain] INFO  com.example.course.CourseApplication - No active profile set, falling back to default profiles: default
+2021-05-03 13:11:04 [restartedMain] INFO  o.s.b.d.e.DevToolsPropertyDefaultsPostProcessor - Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2021-05-03 13:11:04 [restartedMain] INFO  o.s.b.d.e.DevToolsPropertyDefaultsPostProcessor - For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2021-05-03 13:11:05 [restartedMain] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Bootstrapping Spring Data JDBC repositories in DEFAULT mode.
+2021-05-03 13:11:05 [restartedMain] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 11 ms. Found 0 JDBC repository interfaces.
+2021-05-03 13:11:05 [restartedMain] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat initialized with port(s): 8080 (http)
+2021-05-03 13:11:05 [restartedMain] INFO  o.a.catalina.core.StandardService - Starting service [Tomcat]
+2021-05-03 13:11:05 [restartedMain] INFO  o.a.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/9.0.45]
+2021-05-03 13:11:05 [restartedMain] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+2021-05-03 13:11:05 [restartedMain] INFO  o.s.b.w.s.c.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 782 ms
+2021-05-03 13:11:05 [restartedMain] INFO  o.s.s.c.ThreadPoolTaskExecutor - Initializing ExecutorService 'applicationTaskExecutor'
+2021-05-03 13:11:05 [restartedMain] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Starting...
+2021-05-03 13:11:06 [restartedMain] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Start completed.
+2021-05-03 13:11:06 [restartedMain] INFO  o.s.b.d.a.OptionalLiveReloadServer - LiveReload server is running on port 35729
+2021-05-03 13:11:06 [restartedMain] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat started on port(s): 8080 (http) with context path ''
+2021-05-03 13:11:06 [restartedMain] INFO  com.example.course.CourseApplication - Started CourseApplication in 1.771 seconds (JVM running for 2.641)
+2021-05-03 13:11:52 [http-nio-8080-exec-1] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+2021-05-03 13:11:52 [http-nio-8080-exec-1] INFO  o.s.web.servlet.DispatcherServlet - Initializing Servlet 'dispatcherServlet'
+2021-05-03 13:11:52 [http-nio-8080-exec-1] INFO  o.s.web.servlet.DispatcherServlet - Completed initialization in 1 ms
+2021-05-03 13:11:52 [http-nio-8080-exec-1] INFO  com.example.course.CourseApplication - Fetched All Courses.
+2021-05-03 13:12:00 [http-nio-8080-exec-3] INFO  com.example.course.CourseApplication - Fetched Courses for trainer 11
+2021-05-03 13:12:07 [http-nio-8080-exec-10] INFO  com.example.course.CourseApplication - Subscription Added -> For user-> 11 course-> 15
+2021-05-03 13:12:25 [http-nio-8080-exec-8] INFO  com.example.course.CourseApplication - Subscription Added -> For user-> 11 course-> 12
+2021-05-03 13:12:52 [http-nio-8080-exec-5] INFO  com.example.course.CourseApplication - Fetched All Courses.
+2021-05-03 13:13:13 [http-nio-8080-exec-1] INFO  com.example.course.CourseApplication - Fetched All Courses.
+2021-05-03 13:14:40 [http-nio-8080-exec-3] INFO  com.example.course.CourseApplication - Fetched All Courses.
+2021-05-03 13:16:26 [http-nio-8080-exec-10] INFO  com.example.course.CourseApplication - Fetched All Courses.
+2021-05-03 13:16:32 [http-nio-8080-exec-7] INFO  com.example.course.CourseApplication - Fetched All Courses.
+2021-05-03 13:17:30 [http-nio-8080-exec-9] INFO  com.example.course.CourseApplication - Fetched All Courses.
+2021-05-03 13:17:52 [http-nio-8080-exec-1] INFO  com.example.course.CourseApplication - Fetched All Courses.
+2021-05-03 13:17:53 [http-nio-8080-exec-4] INFO  com.example.course.CourseApplication - Fetched Courses for subscribed user 11
+2021-05-03 13:18:54 [http-nio-8080-exec-2] INFO  com.example.course.CourseApplication - Fetched Courses for subscribed user 11
+2021-05-03 13:19:08 [http-nio-8080-exec-6] INFO  com.example.course.CourseApplication - Fetched All Courses.
+2021-05-03 13:19:38 [http-nio-8080-exec-4] INFO  com.example.course.CourseApplication - Fetched Courses for trainer 11
+2021-05-03 13:19:44 [http-nio-8080-exec-2] INFO  com.example.course.CourseApplication - Fetched All Courses.
+2021-05-03 13:20:32 [http-nio-8080-exec-6] INFO  com.example.course.CourseApplication - Fetched Courses for subscribed user 11
+2021-05-03 13:23:06 [http-nio-8080-exec-8] INFO  com.example.course.CourseApplication - Fetched Courses for subscribed user 11
+2021-05-03 13:23:33 [http-nio-8080-exec-5] INFO  com.example.course.CourseApplication - Fetched Courses for subscribed user 11
+2021-05-03 13:24:44 [http-nio-8080-exec-4] INFO  com.example.course.CourseApplication - Fetched Courses for subscribed user 11
+2021-05-03 13:25:18 [http-nio-8080-exec-2] INFO  com.example.course.CourseApplication - Fetched Courses for subscribed user 11
+2021-05-03 13:25:32 [http-nio-8080-exec-6] INFO  com.example.course.CourseApplication - Fetched Courses for subscribed user 11
+2021-05-03 13:26:40 [http-nio-8080-exec-8] INFO  com.example.course.CourseApplication - Fetched Courses for subscribed user 11
+2021-05-03 13:27:44 [http-nio-8080-exec-5] INFO  com.example.course.CourseApplication - Fetched Courses for subscribed user 11
+2021-05-03 13:28:19 [http-nio-8080-exec-4] INFO  com.example.course.CourseApplication - Fetched Courses for subscribed user 11
+2021-05-03 13:38:56 [http-nio-8080-exec-2] INFO  com.example.course.CourseApplication - Fetched Courses for subscribed user 11
+2021-05-03 13:39:03 [http-nio-8080-exec-6] INFO  com.example.course.CourseApplication - Fetched Courses for subscribed user 11
+2021-05-03 13:39:08 [http-nio-8080-exec-8] INFO  com.example.course.CourseApplication - Deleted subscription ->  For user-> 11 course-> 12
+2021-05-03 13:39:09 [http-nio-8080-exec-9] INFO  com.example.course.CourseApplication - Fetched Courses for subscribed user 11
+2021-05-03 13:39:12 [http-nio-8080-exec-1] INFO  com.example.course.CourseApplication - Deleted subscription ->  For user-> 11 course-> 12
+2021-05-03 13:39:13 [http-nio-8080-exec-4] INFO  com.example.course.CourseApplication - Fetched Courses for subscribed user 11
+2021-05-03 13:39:15 [http-nio-8080-exec-2] INFO  com.example.course.CourseApplication - Deleted subscription ->  For user-> 11 course-> 12
+2021-05-03 13:39:16 [http-nio-8080-exec-10] INFO  com.example.course.CourseApplication - Fetched Courses for subscribed user 11
+2021-05-03 13:39:22 [http-nio-8080-exec-8] INFO  com.example.course.CourseApplication - Deleted subscription ->  For user-> 11 course-> 12
+2021-05-03 13:39:23 [http-nio-8080-exec-9] INFO  com.example.course.CourseApplication - Fetched Courses for subscribed user 11
+2021-05-03 13:40:58 [http-nio-8080-exec-1] INFO  com.example.course.CourseApplication - Fetched Courses for subscribed user 11
+2021-05-03 13:41:00 [http-nio-8080-exec-3] INFO  com.example.course.CourseApplication - Deleted subscription ->  For user-> 11 course-> 12
+2021-05-03 13:41:50 [http-nio-8080-exec-10] INFO  com.example.course.CourseApplication - Fetched Courses for subscribed user 11
+2021-05-03 13:41:53 [http-nio-8080-exec-7] INFO  com.example.course.CourseApplication - Fetched Courses for subscribed user 11
+2021-05-03 13:44:12 [restartedMain] INFO  com.example.course.CourseApplication - Starting CourseApplication using Java 11.0.1 on DESKTOP-OLRSLGO with PID 38840 (C:\Users\Jigar\IdeaProjects\course\target\classes started by Jigar in C:\Users\Jigar\IdeaProjects\course)
+2021-05-03 13:44:12 [restartedMain] INFO  com.example.course.CourseApplication - No active profile set, falling back to default profiles: default
+2021-05-03 13:44:12 [restartedMain] INFO  o.s.b.d.e.DevToolsPropertyDefaultsPostProcessor - Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2021-05-03 13:44:12 [restartedMain] INFO  o.s.b.d.e.DevToolsPropertyDefaultsPostProcessor - For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2021-05-03 13:44:13 [restartedMain] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Bootstrapping Spring Data JDBC repositories in DEFAULT mode.
+2021-05-03 13:44:13 [restartedMain] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 11 ms. Found 0 JDBC repository interfaces.
+2021-05-03 13:44:13 [restartedMain] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat initialized with port(s): 8080 (http)
+2021-05-03 13:44:13 [restartedMain] INFO  o.a.catalina.core.StandardService - Starting service [Tomcat]
+2021-05-03 13:44:13 [restartedMain] INFO  o.a.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/9.0.45]
+2021-05-03 13:44:13 [restartedMain] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+2021-05-03 13:44:13 [restartedMain] INFO  o.s.b.w.s.c.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 774 ms
+2021-05-03 13:44:13 [restartedMain] INFO  o.s.s.c.ThreadPoolTaskExecutor - Initializing ExecutorService 'applicationTaskExecutor'
+2021-05-03 13:44:14 [restartedMain] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Starting...
+2021-05-03 13:44:14 [restartedMain] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Start completed.
+2021-05-03 13:44:14 [restartedMain] INFO  o.s.b.d.a.OptionalLiveReloadServer - LiveReload server is running on port 35729
+2021-05-03 13:44:14 [restartedMain] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat started on port(s): 8080 (http) with context path ''
+2021-05-03 13:44:14 [restartedMain] INFO  com.example.course.CourseApplication - Started CourseApplication in 1.687 seconds (JVM running for 2.599)
+2021-05-03 13:46:15 [http-nio-8080-exec-1] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+2021-05-03 13:46:15 [http-nio-8080-exec-1] INFO  o.s.web.servlet.DispatcherServlet - Initializing Servlet 'dispatcherServlet'
+2021-05-03 13:46:15 [http-nio-8080-exec-1] INFO  o.s.web.servlet.DispatcherServlet - Completed initialization in 1 ms
+2021-05-03 13:46:15 [http-nio-8080-exec-1] INFO  com.example.course.CourseApplication - Fetched Courses for subscribed user 11
+2021-05-03 13:46:17 [http-nio-8080-exec-4] ERROR o.a.c.c.C.[.[.[.[dispatcherServlet] - Servlet.service() for servlet [dispatcherServlet] in context with path [] threw exception [Request processing failed; nested exception is org.springframework.jdbc.BadSqlGrammarException: PreparedStatementCallback; bad SQL grammar [DELETE FROM subscription WHERE trainerID = ? AND courseID = ?]; nested exception is java.sql.SQLSyntaxErrorException: Unknown column 'trainerID' in 'where clause'] with root cause
+java.sql.SQLSyntaxErrorException: Unknown column 'trainerID' in 'where clause'
+	at com.mysql.cj.jdbc.exceptions.SQLError.createSQLException(SQLError.java:120)
+	at com.mysql.cj.jdbc.exceptions.SQLExceptionsMapping.translateException(SQLExceptionsMapping.java:122)
+	at com.mysql.cj.jdbc.ClientPreparedStatement.executeInternal(ClientPreparedStatement.java:953)
+	at com.mysql.cj.jdbc.ClientPreparedStatement.executeUpdateInternal(ClientPreparedStatement.java:1092)
+	at com.mysql.cj.jdbc.ClientPreparedStatement.executeUpdateInternal(ClientPreparedStatement.java:1040)
+	at com.mysql.cj.jdbc.ClientPreparedStatement.executeLargeUpdate(ClientPreparedStatement.java:1347)
+	at com.mysql.cj.jdbc.ClientPreparedStatement.executeUpdate(ClientPreparedStatement.java:1025)
+	at com.zaxxer.hikari.pool.ProxyPreparedStatement.executeUpdate(ProxyPreparedStatement.java:61)
+	at com.zaxxer.hikari.pool.HikariProxyPreparedStatement.executeUpdate(HikariProxyPreparedStatement.java)
+	at org.springframework.jdbc.core.JdbcTemplate.lambda$update$2(JdbcTemplate.java:965)
+	at org.springframework.jdbc.core.JdbcTemplate.execute(JdbcTemplate.java:651)
+	at org.springframework.jdbc.core.JdbcTemplate.update(JdbcTemplate.java:960)
+	at org.springframework.jdbc.core.JdbcTemplate.update(JdbcTemplate.java:1015)
+	at org.springframework.jdbc.core.JdbcTemplate.update(JdbcTemplate.java:1025)
+	at com.example.course.dao.Impl.SubscriptionDaoImpl.deleteSubscription(SubscriptionDaoImpl.java:55)
+	at com.example.course.dao.Impl.SubscriptionDaoImpl$$FastClassBySpringCGLIB$$4de09485.invoke(<generated>)
+	at org.springframework.cglib.proxy.MethodProxy.invoke(MethodProxy.java:218)
+	at org.springframework.aop.framework.CglibAopProxy$CglibMethodInvocation.invokeJoinpoint(CglibAopProxy.java:779)
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:163)
+	at org.springframework.aop.framework.CglibAopProxy$CglibMethodInvocation.proceed(CglibAopProxy.java:750)
+	at org.springframework.dao.support.PersistenceExceptionTranslationInterceptor.invoke(PersistenceExceptionTranslationInterceptor.java:137)
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:186)
+	at org.springframework.aop.framework.CglibAopProxy$CglibMethodInvocation.proceed(CglibAopProxy.java:750)
+	at org.springframework.transaction.interceptor.TransactionInterceptor$1.proceedWithInvocation(TransactionInterceptor.java:123)
+	at org.springframework.transaction.interceptor.TransactionAspectSupport.invokeWithinTransaction(TransactionAspectSupport.java:388)
+	at org.springframework.transaction.interceptor.TransactionInterceptor.invoke(TransactionInterceptor.java:119)
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:186)
+	at org.springframework.aop.framework.CglibAopProxy$CglibMethodInvocation.proceed(CglibAopProxy.java:750)
+	at org.springframework.aop.framework.CglibAopProxy$DynamicAdvisedInterceptor.intercept(CglibAopProxy.java:692)
+	at com.example.course.dao.Impl.SubscriptionDaoImpl$$EnhancerBySpringCGLIB$$7594e305.deleteSubscription(<generated>)
+	at com.example.course.services.Impl.SubscriptionServiceImpl.deleteSubscription(SubscriptionServiceImpl.java:33)
+	at com.example.course.controllers.SubscriptionController.deleteSubscription(SubscriptionController.java:38)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:566)
+	at org.springframework.web.method.support.InvocableHandlerMethod.doInvoke(InvocableHandlerMethod.java:197)
+	at org.springframework.web.method.support.InvocableHandlerMethod.invokeForRequest(InvocableHandlerMethod.java:141)
+	at org.springframework.web.servlet.mvc.method.annotation.ServletInvocableHandlerMethod.invokeAndHandle(ServletInvocableHandlerMethod.java:106)
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.invokeHandlerMethod(RequestMappingHandlerAdapter.java:894)
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.handleInternal(RequestMappingHandlerAdapter.java:808)
+	at org.springframework.web.servlet.mvc.method.AbstractHandlerMethodAdapter.handle(AbstractHandlerMethodAdapter.java:87)
+	at org.springframework.web.servlet.DispatcherServlet.doDispatch(DispatcherServlet.java:1060)
+	at org.springframework.web.servlet.DispatcherServlet.doService(DispatcherServlet.java:962)
+	at org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:1006)
+	at org.springframework.web.servlet.FrameworkServlet.doDelete(FrameworkServlet.java:931)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:658)
+	at org.springframework.web.servlet.FrameworkServlet.service(FrameworkServlet.java:883)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:733)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:227)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162)
+	at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:53)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:189)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162)
+	at org.springframework.web.filter.CorsFilter.doFilterInternal(CorsFilter.java:91)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:119)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:189)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162)
+	at org.springframework.web.filter.RequestContextFilter.doFilterInternal(RequestContextFilter.java:100)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:119)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:189)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162)
+	at org.springframework.web.filter.FormContentFilter.doFilterInternal(FormContentFilter.java:93)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:119)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:189)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162)
+	at org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:201)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:119)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:189)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162)
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:202)
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:97)
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:542)
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:143)
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:92)
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:78)
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:357)
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:374)
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:65)
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:893)
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1707)
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:49)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1128)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:628)
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61)
+	at java.base/java.lang.Thread.run(Thread.java:834)
+2021-05-03 13:48:17 [restartedMain] INFO  com.example.course.CourseApplication - Starting CourseApplication using Java 11.0.1 on DESKTOP-OLRSLGO with PID 41824 (C:\Users\Jigar\IdeaProjects\course\target\classes started by Jigar in C:\Users\Jigar\IdeaProjects\course)
+2021-05-03 13:48:17 [restartedMain] INFO  com.example.course.CourseApplication - No active profile set, falling back to default profiles: default
+2021-05-03 13:48:17 [restartedMain] INFO  o.s.b.d.e.DevToolsPropertyDefaultsPostProcessor - Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2021-05-03 13:48:17 [restartedMain] INFO  o.s.b.d.e.DevToolsPropertyDefaultsPostProcessor - For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2021-05-03 13:48:17 [restartedMain] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Bootstrapping Spring Data JDBC repositories in DEFAULT mode.
+2021-05-03 13:48:17 [restartedMain] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 11 ms. Found 0 JDBC repository interfaces.
+2021-05-03 13:48:17 [restartedMain] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat initialized with port(s): 8080 (http)
+2021-05-03 13:48:17 [restartedMain] INFO  o.a.catalina.core.StandardService - Starting service [Tomcat]
+2021-05-03 13:48:17 [restartedMain] INFO  o.a.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/9.0.45]
+2021-05-03 13:48:18 [restartedMain] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+2021-05-03 13:48:18 [restartedMain] INFO  o.s.b.w.s.c.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 759 ms
+2021-05-03 13:48:18 [restartedMain] INFO  o.s.s.c.ThreadPoolTaskExecutor - Initializing ExecutorService 'applicationTaskExecutor'
+2021-05-03 13:48:18 [restartedMain] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Starting...
+2021-05-03 13:48:18 [restartedMain] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Start completed.
+2021-05-03 13:48:18 [restartedMain] INFO  o.s.b.d.a.OptionalLiveReloadServer - LiveReload server is running on port 35729
+2021-05-03 13:48:18 [restartedMain] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat started on port(s): 8080 (http) with context path ''
+2021-05-03 13:48:18 [restartedMain] INFO  com.example.course.CourseApplication - Started CourseApplication in 1.7 seconds (JVM running for 2.453)
+2021-05-03 13:53:23 [http-nio-8080-exec-1] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+2021-05-03 13:53:23 [http-nio-8080-exec-1] INFO  o.s.web.servlet.DispatcherServlet - Initializing Servlet 'dispatcherServlet'
+2021-05-03 13:53:23 [http-nio-8080-exec-1] INFO  o.s.web.servlet.DispatcherServlet - Completed initialization in 2 ms
+2021-05-03 13:53:23 [http-nio-8080-exec-1] INFO  com.example.course.CourseApplication - Fetched Courses for subscribed user 11
+2021-05-03 13:53:29 [restartedMain] INFO  com.example.course.CourseApplication - Starting CourseApplication using Java 11.0.1 on DESKTOP-OLRSLGO with PID 14840 (C:\Users\Jigar\IdeaProjects\course\target\classes started by Jigar in C:\Users\Jigar\IdeaProjects\course)
+2021-05-03 13:53:29 [restartedMain] INFO  com.example.course.CourseApplication - No active profile set, falling back to default profiles: default
+2021-05-03 13:53:29 [restartedMain] INFO  o.s.b.d.e.DevToolsPropertyDefaultsPostProcessor - Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2021-05-03 13:53:29 [restartedMain] INFO  o.s.b.d.e.DevToolsPropertyDefaultsPostProcessor - For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2021-05-03 13:53:29 [restartedMain] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Bootstrapping Spring Data JDBC repositories in DEFAULT mode.
+2021-05-03 13:53:29 [restartedMain] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 11 ms. Found 0 JDBC repository interfaces.
+2021-05-03 13:53:30 [restartedMain] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat initialized with port(s): 8080 (http)
+2021-05-03 13:53:30 [restartedMain] INFO  o.a.catalina.core.StandardService - Starting service [Tomcat]
+2021-05-03 13:53:30 [restartedMain] INFO  o.a.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/9.0.45]
+2021-05-03 13:53:30 [restartedMain] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+2021-05-03 13:53:30 [restartedMain] INFO  o.s.b.w.s.c.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 778 ms
+2021-05-03 13:53:30 [restartedMain] INFO  o.s.s.c.ThreadPoolTaskExecutor - Initializing ExecutorService 'applicationTaskExecutor'
+2021-05-03 13:53:30 [restartedMain] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Starting...
+2021-05-03 13:53:30 [restartedMain] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Start completed.
+2021-05-03 13:53:30 [restartedMain] INFO  o.s.b.d.a.OptionalLiveReloadServer - LiveReload server is running on port 35729
+2021-05-03 13:53:30 [restartedMain] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat started on port(s): 8080 (http) with context path ''
+2021-05-03 13:53:30 [restartedMain] INFO  com.example.course.CourseApplication - Started CourseApplication in 1.681 seconds (JVM running for 2.457)
+2021-05-03 13:53:37 [http-nio-8080-exec-2] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+2021-05-03 13:53:37 [http-nio-8080-exec-2] INFO  o.s.web.servlet.DispatcherServlet - Initializing Servlet 'dispatcherServlet'
+2021-05-03 13:53:37 [http-nio-8080-exec-2] INFO  o.s.web.servlet.DispatcherServlet - Completed initialization in 1 ms
+2021-05-03 13:53:37 [http-nio-8080-exec-2] INFO  com.example.course.CourseApplication - Fetched Courses for subscribed user 11
+2021-05-03 13:53:39 [http-nio-8080-exec-3] INFO  com.example.course.CourseApplication - Deleted subscription ->  For user-> 11 course-> 15
+2021-05-03 13:53:42 [http-nio-8080-exec-4] INFO  com.example.course.CourseApplication - Fetched Courses for subscribed user 11
+2021-05-03 13:53:47 [http-nio-8080-exec-6] INFO  com.example.course.CourseApplication - Fetched All Courses.
+2021-05-03 13:53:50 [http-nio-8080-exec-8] INFO  com.example.course.CourseApplication - Subscription Added -> For user-> 11 course-> 15
+2021-05-03 13:53:53 [http-nio-8080-exec-9] INFO  com.example.course.CourseApplication - Fetched Courses for subscribed user 11
+2021-05-03 13:54:08 [http-nio-8080-exec-2] INFO  com.example.course.CourseApplication - Fetched Courses for subscribed user 11
+2021-05-03 13:54:10 [http-nio-8080-exec-3] INFO  com.example.course.CourseApplication - Deleted subscription ->  For user-> 11 course-> 15
+2021-05-03 13:54:11 [http-nio-8080-exec-4] INFO  com.example.course.CourseApplication - Fetched Courses for subscribed user 11
+2021-05-03 13:54:33 [http-nio-8080-exec-6] INFO  com.example.course.CourseApplication - Fetched Courses for subscribed user 11
+2021-05-03 13:54:36 [http-nio-8080-exec-7] INFO  com.example.course.CourseApplication - Fetched All Courses.
+2021-05-03 13:54:38 [http-nio-8080-exec-10] INFO  com.example.course.CourseApplication - Subscription Added -> For user-> 11 course-> 15
+2021-05-03 13:54:41 [http-nio-8080-exec-2] INFO  com.example.course.CourseApplication - Fetched Courses for subscribed user 11
+2021-05-03 13:54:42 [http-nio-8080-exec-3] INFO  com.example.course.CourseApplication - Deleted subscription ->  For user-> 11 course-> 15
+2021-05-03 13:54:42 [http-nio-8080-exec-4] INFO  com.example.course.CourseApplication - Fetched Courses for subscribed user 11
+2021-05-03 13:55:04 [http-nio-8080-exec-6] INFO  com.example.course.CourseApplication - Fetched Courses for subscribed user 11
+2021-05-03 13:55:08 [http-nio-8080-exec-8] INFO  com.example.course.CourseApplication - Fetched Courses for trainer 11
+2021-05-03 13:55:12 [http-nio-8080-exec-9] INFO  com.example.course.CourseApplication - Fetched All Courses.
+2021-05-03 14:02:20 [http-nio-8080-exec-2] INFO  com.example.course.CourseApplication - Fetched All Courses.
+2021-05-03 14:21:18 [http-nio-8080-exec-3] INFO  com.example.course.CourseApplication - Fetched All Courses.
+2021-05-03 14:21:27 [HikariPool-1 housekeeper] WARN  com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=18m26s534ms124µs).
+2021-05-03 15:21:49 [http-nio-8080-exec-5] INFO  com.example.course.CourseApplication - Fetched Courses for trainer 11
+2021-05-03 15:36:19 [http-nio-8080-exec-2] INFO  com.example.course.CourseApplication - Fetched Courses for subscribed user 11

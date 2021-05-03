@@ -21,7 +21,8 @@ public class SubscriptionController {
     }
 
     @PostMapping(value= "/add")
-    public void addSubscription(Subscription subscription) {
+    public void addSubscription(@RequestBody Subscription subscription) {
+        System.out.println(subscription);
         subscriptionService.addSubscription(subscription);
     }
 

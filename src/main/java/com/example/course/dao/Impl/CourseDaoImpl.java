@@ -31,7 +31,7 @@ public class CourseDaoImpl implements CourseDao {
 
 	@Override
 	public List<Course> getCoursesByTrainer(int id) {
-		String query = "SELECT courses.courseID,courseDesc,courseLocation, courses.courseName ,coursePrerequisites ,courseSkills, last_modified" +
+		String query = "SELECT courses.courseID,creatorID,courseDesc,courseLocation, courses.courseName ,coursePrerequisites ,courseSkills, last_modified" +
 				"   FROM courses" +
 				"   left join trainers" +
 				"   on  trainers.courseID= courses.courseID" +
@@ -40,9 +40,18 @@ public class CourseDaoImpl implements CourseDao {
 		LoggerConfig.LOGGER.info("Fetched Courses for trainer "+id);
 		return jdbcTemplate.query(query, new CourseRowMapper(),id);
 	}
+
+	@Override
+	public List<Course> getCoursesByCreator(int id) {
+		String query = "SELECT * FROM courses WHERE creatorID=?";
+
+		LoggerConfig.LOGGER.info("Fetched Courses for creator "+id);
+		return jdbcTemplate.query(query, new CourseRowMapper(),id);
+	}
+
 	@Override
 	public List<Course> getCoursesBySubscription(int id) {
-		String query = "select courses.courseID,courseDesc,courseLocation, courses.courseName ,coursePrerequisites ,courseSkills, last_modified from courses\n" +
+		String query = "select courses.courseID,creatorID, courseDesc,courseLocation, courses.courseName ,coursePrerequisites ,courseSkills, last_modified from courses\n" +
 				"left join subscription s on courses.courseID = s.courseID\n" +
 				"where userID=?";
 
@@ -59,9 +68,9 @@ public class CourseDaoImpl implements CourseDao {
 
 	@Override
 	public Course addCourse(Course course) {
-		String query = "INSERT INTO courses (courseName, courseDesc, courseSkills,coursePrerequisites,courseLocation,last_modified)" +
-						" VALUES (?,?,?,?,?,NOW())";
-		jdbcTemplate.update(query, course.getCourseName(),course.getCourseDesc(),course.getCourseSkills(),
+		String query = "INSERT INTO courses (creatorID,courseName, courseDesc, courseSkills,coursePrerequisites,courseLocation,last_modified)" +
+						" VALUES (?,?,?,?,?,?,NOW())";
+		jdbcTemplate.update(query,course.getCourseID(), course.getCourseName(),course.getCourseDesc(),course.getCourseSkills(),
 							course.getCoursePrerequisites(),course.getCourseLocation());
 
 		LoggerConfig.LOGGER.info("New Course Added -> " + course.getCourseName());

@@ -7,6 +7,8 @@ import java.util.List;
 
 public interface CourseService {
 
+	List<Course> getCoursesByCreator(int id);
+
 	List<Course> getAllCourses();
 	List<Course> getCoursesByTrainer(int id);
 	Course getCourseByName(String name);

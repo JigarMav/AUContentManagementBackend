@@ -7,6 +7,7 @@ import com.example.course.rowmapper.SubscriptionRowMapper;
 import org.springframework.jdbc.core.JdbcTemplate;
 import org.springframework.stereotype.Repository;
 import org.springframework.transaction.annotation.Transactional;
+import org.springframework.web.bind.annotation.PathVariable;
 
 import java.util.List;
 
@@ -50,8 +51,8 @@ public class SubscriptionDaoImpl implements SubscriptionDao {
     }
 
     @Override
-    public void deleteSubscription(int uid, int cid) {
-        String query = "DELETE FROM trainers WHERE trainerID = ? AND courseID = ?";
+    public void deleteSubscription( int uid, int cid) {
+        String query = "DELETE FROM subscription WHERE userID = ? AND courseID = ?";
         jdbcTemplate.update(query, uid, cid);
 
         LoggerConfig.LOGGER.info("Deleted subscription ->  For user-> " + uid+" course-> "+cid);

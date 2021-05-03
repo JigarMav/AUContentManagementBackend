@@ -1,18 +1,17 @@
 package com.example.course.models;
 
-import lombok.Getter;
-import lombok.NoArgsConstructor;
-import lombok.Setter;
-import lombok.ToString;
+import lombok.*;
 
 import java.sql.Timestamp;
 @Getter
 @Setter
 @NoArgsConstructor
 @ToString
+@AllArgsConstructor
 public class Course {
 
 	private int courseID;
+	private int creatorID;
 	private String courseName;
 	private String courseDesc;
 	private String courseSkills;
@@ -20,9 +19,10 @@ public class Course {
 	private String courseLocation;
 	private Timestamp last_modified;
 
-	public Course(String courseName, String courseDesc, String courseSkills,
+	public Course(int creatorID,String courseName, String courseDesc, String courseSkills,
 				  String coursePrerequisites, String courseLocation,
 				  Timestamp last_modified) {
+		this.creatorID = creatorID;
 		this.courseName = courseName;
 		this.courseDesc = courseDesc;
 		this.courseSkills = courseSkills;

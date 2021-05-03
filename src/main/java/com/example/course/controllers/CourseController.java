@@ -17,6 +17,7 @@ import org.springframework.web.bind.annotation.RestController;
 
 
 
+
 @RestController
 @RequestMapping("api/course")
 @CrossOrigin(origins = "http://localhost:4200", allowedHeaders = "*", exposedHeaders = "Authorization")
@@ -33,6 +34,11 @@ public class CourseController {
 	@GetMapping(value= "/trainer/{id}")
 	public List<Course> getCoursesByTrainer(@PathVariable("id") int id){
 		return courseService.getCoursesByTrainer(id);
+	}
+
+	@GetMapping(value= "/creator/{id}")
+	public List<Course> getCoursesByCreator(@PathVariable("id") int id){
+		return courseService.getCoursesByCreator(id);
 	}
 
 	@GetMapping(value= "/user/{id}")
