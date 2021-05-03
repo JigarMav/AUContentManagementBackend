@@ -35,6 +35,11 @@ public class CourseController {
 		return courseService.getCoursesByTrainer(id);
 	}
 
+	@GetMapping(value= "/user/{id}")
+	public List<Course> getCoursesBySubscription(@PathVariable("id") int id){
+		return courseService.getCoursesBySubscription(id);
+	}
+
 	@GetMapping(value= "/{name}")
 	public Course getCourseByName(@PathVariable("name") String name) {
 		return courseService.getCourseByName(name);

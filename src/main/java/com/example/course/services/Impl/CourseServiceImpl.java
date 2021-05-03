@@ -31,7 +31,12 @@ public class CourseServiceImpl implements CourseService {
 		return coursedao.getCourseByName(name);
 	}
 
-	@Override
+    @Override
+    public List<Course> getCoursesBySubscription(int id) {
+        return coursedao.getCoursesBySubscription(id);
+    }
+
+    @Override
 	public Course addCourse(Course course) {
 		return coursedao.addCourse(course);
 		

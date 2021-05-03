@@ -12,6 +12,7 @@ public interface CourseDao {
 	
 	Course getCourseByName(String name);
 	List<Course> getCoursesByTrainer(int id);
+	List<Course> getCoursesBySubscription(int id);
 	Course addCourse(Course course);
 	
 	void updateCourse(Course course);
