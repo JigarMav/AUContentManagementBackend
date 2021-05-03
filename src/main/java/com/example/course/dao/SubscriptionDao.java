@@ -7,7 +7,7 @@ import java.util.List;
 public interface SubscriptionDao {
     List<Subscription> getAllSubscription();
     List<Subscription> getAllEmailsForCourse(int cid);
-    void addSubscription(int uid,int cid,String email);
+    void addSubscription(Subscription subscription);
 
     void deleteSubscription(int uid, int cid);
 

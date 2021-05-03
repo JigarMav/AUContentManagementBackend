@@ -3,7 +3,6 @@ package com.example.course.controllers;
 import com.example.course.models.Subscription;
 import com.example.course.services.SubscriptionService;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.stereotype.Component;
 import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
@@ -22,9 +21,8 @@ public class SubscriptionController {
     }
 
     @PostMapping(value= "/add")
-    public void addSubscription(@RequestParam("uid") int uid, @RequestParam("cid") int cid,
-                                @RequestParam("email") String email) {
-        subscriptionService.addSubscription(uid,cid,email);
+    public void addSubscription(Subscription subscription) {
+        subscriptionService.addSubscription(subscription);
     }
 
     @GetMapping(value= "/all/{id}")

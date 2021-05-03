@@ -24,8 +24,8 @@ public class SubscriptionServiceImpl implements SubscriptionService {
     }
 
     @Override
-    public void addSubscription(int uid, int cid, String email) {
-        subscriptionDao.addSubscription(uid, cid, email);
+    public void addSubscription(Subscription subscription) {
+        subscriptionDao.addSubscription(subscription);
     }
 
     @Override

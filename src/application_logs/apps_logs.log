@@ -233,3 +233,25 @@ org.springframework.dao.IncorrectResultSizeDataAccessException: Incorrect result
 2021-05-03 00:55:33 [http-nio-8080-exec-6] INFO  com.example.course.CourseApplication - New Trainer Added -> 11
 2021-05-03 00:55:33 [http-nio-8080-exec-7] INFO  com.example.course.CourseApplication - Fetched All Courses.
 2021-05-03 00:55:39 [http-nio-8080-exec-5] INFO  com.example.course.CourseApplication - Fetched Courses for trainer 11
+2021-05-03 11:34:40 [restartedMain] INFO  com.example.course.CourseApplication - Starting CourseApplication using Java 11.0.1 on DESKTOP-OLRSLGO with PID 18244 (C:\Users\Jigar\IdeaProjects\course\target\classes started by Jigar in C:\Users\Jigar\IdeaProjects\course)
+2021-05-03 11:34:40 [restartedMain] INFO  com.example.course.CourseApplication - No active profile set, falling back to default profiles: default
+2021-05-03 11:34:41 [restartedMain] INFO  o.s.b.d.e.DevToolsPropertyDefaultsPostProcessor - Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2021-05-03 11:34:41 [restartedMain] INFO  o.s.b.d.e.DevToolsPropertyDefaultsPostProcessor - For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2021-05-03 11:34:41 [restartedMain] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Bootstrapping Spring Data JDBC repositories in DEFAULT mode.
+2021-05-03 11:34:41 [restartedMain] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 32 ms. Found 0 JDBC repository interfaces.
+2021-05-03 11:34:42 [restartedMain] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat initialized with port(s): 8080 (http)
+2021-05-03 11:34:42 [restartedMain] INFO  o.a.catalina.core.StandardService - Starting service [Tomcat]
+2021-05-03 11:34:42 [restartedMain] INFO  o.a.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/9.0.45]
+2021-05-03 11:34:42 [restartedMain] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+2021-05-03 11:34:42 [restartedMain] INFO  o.s.b.w.s.c.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 1171 ms
+2021-05-03 11:34:42 [restartedMain] INFO  o.s.s.c.ThreadPoolTaskExecutor - Initializing ExecutorService 'applicationTaskExecutor'
+2021-05-03 11:34:42 [restartedMain] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Starting...
+2021-05-03 11:34:42 [restartedMain] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Start completed.
+2021-05-03 11:34:43 [restartedMain] INFO  o.s.b.d.a.OptionalLiveReloadServer - LiveReload server is running on port 35729
+2021-05-03 11:34:43 [restartedMain] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat started on port(s): 8080 (http) with context path ''
+2021-05-03 11:34:43 [restartedMain] INFO  com.example.course.CourseApplication - Started CourseApplication in 2.525 seconds (JVM running for 3.589)
+2021-05-03 11:35:26 [http-nio-8080-exec-3] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+2021-05-03 11:35:26 [http-nio-8080-exec-3] INFO  o.s.web.servlet.DispatcherServlet - Initializing Servlet 'dispatcherServlet'
+2021-05-03 11:35:26 [http-nio-8080-exec-3] INFO  o.s.web.servlet.DispatcherServlet - Completed initialization in 1 ms
+2021-05-03 11:39:26 [http-nio-8080-exec-8] INFO  com.example.course.CourseApplication - Subscription Added -> For user-> 12 course-> 1
+2021-05-03 11:46:10 [http-nio-8080-exec-6] WARN  o.s.w.s.m.s.DefaultHandlerExceptionResolver - Resolved [org.springframework.web.method.annotation.MethodArgumentTypeMismatchException: Failed to convert value of type 'java.lang.String' to required type 'int'; nested exception is java.lang.NumberFormatException: For input string: "id=3"]

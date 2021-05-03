@@ -4,7 +4,6 @@ import com.example.course.LoggerConfig;
 import com.example.course.dao.SubscriptionDao;
 import com.example.course.models.Subscription;
 import com.example.course.rowmapper.SubscriptionRowMapper;
-import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.jdbc.core.JdbcTemplate;
 import org.springframework.stereotype.Repository;
 import org.springframework.transaction.annotation.Transactional;
@@ -35,8 +34,11 @@ public class SubscriptionDaoImpl implements SubscriptionDao {
     }
 
     @Override
-    public void addSubscription(int uid, int cid, String email) {
+    public void addSubscription(Subscription subscription) {
         String ADD_SUBSCRIPTION = "INSERT INTO subscription(userID, courseID,email) VALUES (?,?,?)";
+        int cid = subscription.getCourseID();
+        int uid = subscription.getUserID();
+        String email = subscription.getEmail();
         try {
             jdbcTemplate.update(ADD_SUBSCRIPTION, uid,cid,email);
             LoggerConfig.LOGGER.info("Subscription Added -> For user-> " + uid+" course-> "+cid);
