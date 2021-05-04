@@ -70,7 +70,7 @@ public class CourseDaoImpl implements CourseDao {
 	public Course addCourse(Course course) {
 		String query = "INSERT INTO courses (creatorID,courseName, courseDesc, courseSkills,coursePrerequisites,courseLocation,last_modified)" +
 						" VALUES (?,?,?,?,?,?,NOW())";
-		jdbcTemplate.update(query,course.getCourseID(), course.getCourseName(),course.getCourseDesc(),course.getCourseSkills(),
+		jdbcTemplate.update(query,course.getCreatorID(), course.getCourseName(),course.getCourseDesc(),course.getCourseSkills(),
 							course.getCoursePrerequisites(),course.getCourseLocation());
 
 		LoggerConfig.LOGGER.info("New Course Added -> " + course.getCourseName());

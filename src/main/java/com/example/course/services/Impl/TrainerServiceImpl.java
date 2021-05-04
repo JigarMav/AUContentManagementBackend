@@ -2,7 +2,6 @@ package com.example.course.services.Impl;
 
 import java.util.List;
 
-import com.example.course.dao.Impl.TrainerDaoImpl;
 import com.example.course.dao.TrainerDao;
 import com.example.course.models.Trainer;
 import com.example.course.services.TrainerService;
@@ -27,6 +26,11 @@ public class TrainerServiceImpl implements TrainerService {
 		return trainerdao.getTrainerByCourseID(id);
 	}
 
+	@Override
+	public int getTrainerById(int id)
+	{
+		return trainerdao.getTrainerById(id);
+	}
 	@Override
 	public void addTrainer(Trainer trainer) {
 		trainerdao.addTrainer(trainer);

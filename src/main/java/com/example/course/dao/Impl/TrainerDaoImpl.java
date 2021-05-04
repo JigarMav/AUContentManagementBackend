@@ -30,6 +30,21 @@ public class TrainerDaoImpl implements TrainerDao {
 	}
 
 	@Override
+	public int getTrainerById(int id) {
+		Trainer t = null;
+		String query = "SELECT * FROM users JOIN trainers ON users.userID = trainers.trainerID where trainers.trainerID= ? limit 1";
+
+		LoggerConfig.LOGGER.info("Fetched Trainer."+id);
+
+		t = jdbcTemplate.queryForObject(query, new TrainerRowMapper(),id);
+		if(t==null)
+		{
+			return -1;
+		}
+		return id;
+	}
+
+	@Override
 	public List<Trainer> getTrainerByCourseID(int id) {
 		String query = "SELECT * FROM courses JOIN " + 
 						"(SELECT * FROM users JOIN trainers ON users.userID = trainers.trainerID) AS trainer " +

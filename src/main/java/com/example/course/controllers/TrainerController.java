@@ -20,7 +20,12 @@ public class TrainerController {
 	public List<Trainer> getAllTrainers() {
 		return trainerService.getAllTrainers();
 	}
-	
+
+	@GetMapping(value = "/select/{id}")
+	int getTrainerById(@PathVariable("id") int id)
+	{
+		return trainerService.getTrainerById(id);
+	}
 	@GetMapping(value= "/{id}")
 	public List<Trainer> getTrainerByCourseID(@PathVariable("id") int id) {
 		return trainerService.getTrainerByCourseID(id);
