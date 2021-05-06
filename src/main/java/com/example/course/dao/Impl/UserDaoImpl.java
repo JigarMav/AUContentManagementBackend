@@ -4,6 +4,7 @@ import java.util.ArrayList;
 import java.util.List;
 
 import com.example.course.LoggerConfig;
+import com.example.course.Queries.Queries;
 import com.example.course.dao.UserDao;
 import com.example.course.models.User;
 import com.example.course.rowmapper.UserRowMapper;
@@ -27,7 +28,7 @@ public class UserDaoImpl implements UserDao {
 	public List<User> getAllUsers() {
 		String query = "SELECT * FROM users";
 		List<User> users = new ArrayList<>();
-		users = jdbcTemplate.query(query, new UserRowMapper());
+		users = jdbcTemplate.query(Queries.GET_ALL_USERS, new UserRowMapper());
 		return users;
 	}
 
@@ -36,7 +37,7 @@ public class UserDaoImpl implements UserDao {
 		String query = "SELECT * FROM users WHERE email = ?";
 		User u = null;
 		try {
-			return u = jdbcTemplate.queryForObject(query, new UserRowMapper(), email);
+			return u = jdbcTemplate.queryForObject(Queries.GET_USERS_BY_EMAIL, new UserRowMapper(), email);
 		}
 		catch(DataAccessException e) {
 			LoggerConfig.LOGGER.error("User Not Valid! => " + email);
@@ -48,7 +49,7 @@ public class UserDaoImpl implements UserDao {
 		String query = "SELECT * FROM users WHERE userID = ?";
 		User u = null;
 		try {
-			return u = jdbcTemplate.queryForObject(query, new UserRowMapper(), id);
+			return u = jdbcTemplate.queryForObject(Queries.GET_USER_BY_ID, new UserRowMapper(), id);
 		}
 		catch(DataAccessException e) {
 			LoggerConfig.LOGGER.error("User Not Valid! => " + id);
@@ -60,13 +61,13 @@ public class UserDaoImpl implements UserDao {
 	public void addUser(User user) {
 		System.out.println("add user called for "+user.getUserName());
 		String query = "INSERT INTO users (userName,email,userLocation) VALUES (?,?,?)";
-		int a = jdbcTemplate.update(query, user.getUserName(),user.getEmail(),user.getUserLocation());
+		int a = jdbcTemplate.update(Queries.CREATE_USER, user.getUserName(),user.getEmail(),user.getUserLocation());
 	}
 
 	@Override
 	public void deleteUser(int id) {
 		String query = "DELETE FROM users WHERE userID = ?";
-		jdbcTemplate.update(query, id);
+		jdbcTemplate.update(Queries.DELETE_USER, id);
 		
 	}
 	

@@ -12,6 +12,7 @@ import java.sql.Timestamp;
 @Getter
 @Setter
 @NoArgsConstructor
+
 public class TrainingMaterial {
 
 	private int materialID;

@@ -3,6 +3,7 @@ package com.example.course.dao.Impl;
 import java.util.List;
 
 import com.example.course.LoggerConfig;
+import com.example.course.Queries.Queries;
 import com.example.course.dao.TrainerDao;
 import com.example.course.models.Trainer;
 import com.example.course.rowmapper.TrainerRowMapper;
@@ -26,7 +27,7 @@ public class TrainerDaoImpl implements TrainerDao {
 		String query = "SELECT * FROM courses JOIN (SELECT * FROM users JOIN trainers ON users.userID = trainers.trainerID) AS trainer ON courses.courseID = trainer.courseID ";
 		
 		LoggerConfig.LOGGER.info("Fetched All Trainers.");
-		return jdbcTemplate.query(query, new TrainerRowMapper());
+		return jdbcTemplate.query(Queries.GET_ALL_TRAINERS, new TrainerRowMapper());
 	}
 
 	@Override
@@ -36,7 +37,7 @@ public class TrainerDaoImpl implements TrainerDao {
 
 		LoggerConfig.LOGGER.info("Fetched Trainer."+id);
 
-		t = jdbcTemplate.queryForObject(query, new TrainerRowMapper(),id);
+		t = jdbcTemplate.queryForObject(Queries.GET_TRAINER_BY_ID, new TrainerRowMapper(),id);
 		if(t==null)
 		{
 			return -1;
@@ -50,14 +51,15 @@ public class TrainerDaoImpl implements TrainerDao {
 						"(SELECT * FROM users JOIN trainers ON users.userID = trainers.trainerID) AS trainer " +
 						"ON courses.courseID = trainer.courseID WHERE courses.courseID = ?"; 
 				
-		return jdbcTemplate.query(query, new TrainerRowMapper(), id);
+		return jdbcTemplate.query(Queries.GET_TRAINER_BY_COURSEID, new TrainerRowMapper(), id);
 	}
 
 	@Override
 	public void addTrainer(Trainer trainer) {
 		String query = "INSERT INTO trainers(trainerID, courseID) VALUES (?,?)";
+
 		try {
-			jdbcTemplate.update(query, trainer.getTrainerID(),trainer.getCourseID());
+			jdbcTemplate.update(Queries.CREATE_TRAINER, trainer.getTrainerID(),trainer.getCourseID());
 			LoggerConfig.LOGGER.info("New Trainer Added -> " + trainer.getTrainerID());
 		}
 		catch(Exception e) {
@@ -70,7 +72,7 @@ public class TrainerDaoImpl implements TrainerDao {
 	public void addTrainerAfterCourse(int tid, int cid) {
 		String query = "INSERT INTO trainers(trainerID, courseID) VALUES (?,?)";
 		try {
-			jdbcTemplate.update(query, tid,cid);
+			jdbcTemplate.update(Queries.CREATE_TRAINER_AFTER_COURSE, tid,cid);
 			LoggerConfig.LOGGER.info("New Trainer Added -> " + tid);
 		}
 		catch(Exception e) {
@@ -82,7 +84,7 @@ public class TrainerDaoImpl implements TrainerDao {
 	@Override
 	public void deleteTrainer(int tid, int cid) {
 		String query = "DELETE FROM trainers WHERE trainerID = ? AND courseID = ?";
-		jdbcTemplate.update(query, tid, cid);
+		jdbcTemplate.update(Queries.DELETE_TRAINER, tid, cid);
 		
 		LoggerConfig.LOGGER.info("Deleted Trainer -> " + tid);
 	}

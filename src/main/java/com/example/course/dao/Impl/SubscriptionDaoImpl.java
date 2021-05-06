@@ -1,6 +1,7 @@
 package com.example.course.dao.Impl;
 
 import com.example.course.LoggerConfig;
+import com.example.course.Queries.Queries;
 import com.example.course.dao.SubscriptionDao;
 import com.example.course.models.Subscription;
 import com.example.course.rowmapper.SubscriptionRowMapper;
@@ -25,13 +26,13 @@ public class SubscriptionDaoImpl implements SubscriptionDao {
     @Override
     public List<Subscription> getAllSubscription() {
         String GET_ALL_SUBSCRIPTION = "SELECT * FROM subscription";
-        return jdbcTemplate.query(GET_ALL_SUBSCRIPTION, new SubscriptionRowMapper());
+        return jdbcTemplate.query(Queries.GET_ALL_SUB, new SubscriptionRowMapper());
     }
 
     @Override
     public List<Subscription> getAllEmailsForCourse(int cid) {
         String GET_ALL_EMAIL_FOR_COURSE = "SELECT * FROM subscription WHERE courseID=?";
-        return jdbcTemplate.query(GET_ALL_EMAIL_FOR_COURSE,new SubscriptionRowMapper(),cid);
+        return jdbcTemplate.query(Queries.GET_ALL_EMAIL_FOR_COURSE,new SubscriptionRowMapper(),cid);
     }
 
     @Override
@@ -41,7 +42,7 @@ public class SubscriptionDaoImpl implements SubscriptionDao {
         int uid = subscription.getUserID();
         String email = subscription.getEmail();
         try {
-            jdbcTemplate.update(ADD_SUBSCRIPTION, uid,cid,email);
+            jdbcTemplate.update(Queries.CREATE_SUBSCRIPTION, uid,cid,email);
             LoggerConfig.LOGGER.info("Subscription Added -> For user-> " + uid+" course-> "+cid);
         }
         catch(Exception e) {
@@ -53,7 +54,7 @@ public class SubscriptionDaoImpl implements SubscriptionDao {
     @Override
     public void deleteSubscription( int uid, int cid) {
         String query = "DELETE FROM subscription WHERE userID = ? AND courseID = ?";
-        jdbcTemplate.update(query, uid, cid);
+        jdbcTemplate.update(Queries.DELETE_SUB, uid, cid);
 
         LoggerConfig.LOGGER.info("Deleted subscription ->  For user-> " + uid+" course-> "+cid);
     }

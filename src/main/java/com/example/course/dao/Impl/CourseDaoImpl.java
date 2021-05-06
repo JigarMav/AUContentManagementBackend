@@ -3,6 +3,7 @@ package com.example.course.dao.Impl;
 import java.util.List;
 
 import com.example.course.LoggerConfig;
+import com.example.course.Queries.Queries;
 import com.example.course.dao.CourseDao;
 import com.example.course.models.Course;
 import com.example.course.rowmapper.CourseRowMapper;
@@ -26,7 +27,7 @@ public class CourseDaoImpl implements CourseDao {
 		String query = "SELECT * FROM courses";
 		
 		LoggerConfig.LOGGER.info("Fetched All Courses.");
-		return jdbcTemplate.query(query, new CourseRowMapper());
+		return jdbcTemplate.query(Queries.GET_ALL_COURSES, new CourseRowMapper());
 	}
 
 	@Override
@@ -38,7 +39,7 @@ public class CourseDaoImpl implements CourseDao {
 				"   where trainerID=?";
 
 		LoggerConfig.LOGGER.info("Fetched Courses for trainer "+id);
-		return jdbcTemplate.query(query, new CourseRowMapper(),id);
+		return jdbcTemplate.query(Queries.GET_COURSES_BY_TRAINER, new CourseRowMapper(),id);
 	}
 
 	@Override
@@ -46,7 +47,7 @@ public class CourseDaoImpl implements CourseDao {
 		String query = "SELECT * FROM courses WHERE creatorID=?";
 
 		LoggerConfig.LOGGER.info("Fetched Courses for creator "+id);
-		return jdbcTemplate.query(query, new CourseRowMapper(),id);
+		return jdbcTemplate.query(Queries.GET_COURSES_BY_CREATOR, new CourseRowMapper(),id);
 	}
 
 	@Override
@@ -56,21 +57,21 @@ public class CourseDaoImpl implements CourseDao {
 				"where userID=?";
 
 		LoggerConfig.LOGGER.info("Fetched Courses for subscribed user "+id);
-		return jdbcTemplate.query(query, new CourseRowMapper(),id);
+		return jdbcTemplate.query(Queries.GET_COURSES_BY_SUBSCRIPTION, new CourseRowMapper(),id);
 	}
 
 	@Override
 	public Course getCourseByName(String name) {
 		LoggerConfig.LOGGER.info("Get Course  -> " + name);
 		String query = "SELECT * FROM courses WHERE courseName = ? limit 1";
-		return jdbcTemplate.queryForObject(query, new CourseRowMapper(), name); 
+		return jdbcTemplate.queryForObject(Queries.GET_COURSES_BY_NAME, new CourseRowMapper(), name);
 	}
 
 	@Override
 	public Course addCourse(Course course) {
 		String query = "INSERT INTO courses (creatorID,courseName, courseDesc, courseSkills,coursePrerequisites,courseLocation,last_modified)" +
 						" VALUES (?,?,?,?,?,?,NOW())";
-		jdbcTemplate.update(query,course.getCreatorID(), course.getCourseName(),course.getCourseDesc(),course.getCourseSkills(),
+		jdbcTemplate.update(Queries.CREATE_COURSE,course.getCreatorID(), course.getCourseName(),course.getCourseDesc(),course.getCourseSkills(),
 							course.getCoursePrerequisites(),course.getCourseLocation());
 
 		LoggerConfig.LOGGER.info("New Course Added -> " + course.getCourseName());
@@ -84,7 +85,7 @@ public class CourseDaoImpl implements CourseDao {
 		System.out.println("update for id "+cid);
 		String query = "UPDATE courses SET courseName = ?, courseDesc = ?, courseSkills = ?,coursePrerequisites = ?,courseLocation = ?,last_modified=NOW()" +
 						" WHERE courseID = ?";
-		jdbcTemplate.update(query, course.getCourseName(),course.getCourseDesc(),course.getCourseSkills(),
+		jdbcTemplate.update(Queries.UPDATE_COURSE, course.getCourseName(),course.getCourseDesc(),course.getCourseSkills(),
 							course.getCoursePrerequisites(),course.getCourseLocation(), course.getCourseID());
 		
 		LoggerConfig.LOGGER.info("Course Updated -> " + course.getCourseName());
@@ -93,7 +94,7 @@ public class CourseDaoImpl implements CourseDao {
 	@Override
 	public void deleteCourse(int id) {
 		String query = "DELETE FROM courses WHERE courseID = ?";
-		jdbcTemplate.update(query, id);
+		jdbcTemplate.update(Queries.DELETE_COURSE, id);
 		
 		LoggerConfig.LOGGER.info("Course Deleted -> " + id);
 		
