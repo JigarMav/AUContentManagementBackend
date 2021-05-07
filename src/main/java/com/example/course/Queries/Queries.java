@@ -1,7 +1,7 @@
 package com.example.course.Queries;
 
 public class Queries {
-    Queries()
+    public Queries()
     {
 
     }
