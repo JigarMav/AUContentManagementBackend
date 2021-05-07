@@ -19,15 +19,15 @@ public class Course {
 	private String courseLocation;
 	private Timestamp last_modified;
 
-	public Course(int creatorID,String courseName, String courseDesc, String courseSkills,
-				  String coursePrerequisites, String courseLocation,
-				  Timestamp last_modified) {
-		this.creatorID = creatorID;
-		this.courseName = courseName;
-		this.courseDesc = courseDesc;
-		this.courseSkills = courseSkills;
-		this.coursePrerequisites = coursePrerequisites;
-		this.courseLocation = courseLocation;
-		this.last_modified = last_modified;
-	}
+//	public Course(int creatorID,String courseName, String courseDesc, String courseSkills,
+//				  String coursePrerequisites, String courseLocation,
+//				  Timestamp last_modified) {
+//		this.creatorID = creatorID;
+//		this.courseName = courseName;
+//		this.courseDesc = courseDesc;
+//		this.courseSkills = courseSkills;
+//		this.coursePrerequisites = coursePrerequisites;
+//		this.courseLocation = courseLocation;
+//		this.last_modified = last_modified;
+//	}
 }

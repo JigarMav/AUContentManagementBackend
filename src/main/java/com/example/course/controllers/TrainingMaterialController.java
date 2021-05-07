@@ -62,13 +62,12 @@ public class TrainingMaterialController {
 							@RequestParam("courseId") int courseId,
 							@RequestParam("trainerId") int trainerId,
 							@RequestParam("trainerName") String trainerName) {
-		System.out.println(file.getName());
-		System.out.println(courseId);
-		System.out.println(trainerId);
-		System.out.println(trainerName);
 
-//		int cid = Integer.parseInt(courseId);
-//		int tid = Integer.parseInt(trainerId);
+//		System.out.println(file.getName());
+//		System.out.println(courseId);
+//		System.out.println(trainerId);
+//		System.out.println(trainerName);
+
 		materialService.addMaterial(file, courseId,trainerId,trainerName);
 	}
 	

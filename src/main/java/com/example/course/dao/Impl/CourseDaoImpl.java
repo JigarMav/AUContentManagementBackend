@@ -29,6 +29,14 @@ public class CourseDaoImpl implements CourseDao {
 		LoggerConfig.LOGGER.info("Fetched All Courses.");
 		return jdbcTemplate.query(Queries.GET_ALL_COURSES, new CourseRowMapper());
 	}
+	@Override
+	public Course getCourseById(int id)
+	{
+		String query = "SELECT * FROM courses where courseID=?";
+		Course c = null;
+		c =  jdbcTemplate.queryForObject(query,new CourseRowMapper(),id);
+		return c;
+	}
 
 	@Override
 	public List<Course> getCoursesByTrainer(int id) {

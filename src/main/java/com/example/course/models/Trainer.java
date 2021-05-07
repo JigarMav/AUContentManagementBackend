@@ -18,11 +18,5 @@ public class Trainer extends User {
 		super();
 	}
 
-	public Trainer(int trainerID, int courseID, String feedback) {
-		this.trainerID = trainerID;
-		this.courseID = courseID;
-	}
-
-
 
 }
